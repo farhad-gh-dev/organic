@@ -1,0 +1,21 @@
+.navbar {
+  padding: 30px 140px 10px;
+
+  .brand-container {
+    .brand-logo {
+      width: 25px;
+      margin-right: 7px;
+    }
+    .brand-name {
+      font-size: 26px;
+    }
+  }
+
+  .buttons-container {
+    .sign-up-button {
+      padding-left: 42px;
+      padding-right: 42px;
+      margin-left: 60px;
+    }
+  }
+}

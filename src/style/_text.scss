@@ -1,0 +1,41 @@
+.text-cap {
+  text-transform: capitalize !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-weight-bold {
+  font-weight: bold !important;
+}
+
+.text-weight-normal {
+  font-weight: normal !important;
+}
+
+.text-weight-light {
+  font-weight: 300 !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-title {
+  font-family: "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.text-paragraph {
+  font-family: "Antipasto Pro", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}

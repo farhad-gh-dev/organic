@@ -1,0 +1,34 @@
+$z-index-navbar: 1000;
+$z-index-fixed: 1020;
+$z-index-tooltip: 1030;
+$z-index-loading: 1040;
+$z-index-popup: 1050;
+$z-index-alert: 1060;
+
+.z-index-reset {
+  z-index: 0 !important;
+}
+
+.z-index-navbar {
+  z-index: $z-index-navbar !important;
+}
+
+.z-index-fixed {
+  z-index: $z-index-fixed !important;
+}
+
+.z-index-tooltip {
+  z-index: $z-index-tooltip !important;
+}
+
+.z-index-loading {
+  z-index: $z-index-loading !important;
+}
+
+.z-index-popup {
+  z-index: $z-index-popup !important;
+}
+
+.z-index-alert {
+  z-index: $z-index-alert !important;
+}

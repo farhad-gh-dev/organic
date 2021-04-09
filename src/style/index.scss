@@ -1,1 +1,21 @@
+//FONT
 @import "./fonts";
+
+//VARIABLES
+@import "./variables";
+
+//MIXINS
+@import "./mixins";
+
+//CUSTOM CLASSES
+@import "./preset";
+@import "./z-index";
+@import "./position";
+@import "./flex";
+@import "./text";
+@import "./button";
+
+//COMPONENTS
+@import "../app";
+@import "../components/Navbar/navbar";
+@import "../components/Navbar/SearchBox/search-box";

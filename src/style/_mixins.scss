@@ -1,0 +1,41 @@
+@mixin gradient-background($gradient-values) {
+  background: -webkit-linear-gradient($gradient-values);
+  background: -moz-linear-gradient($gradient-values);
+  background: linear-gradient($gradient-values);
+}
+
+@mixin drop-shadow($x, $y, $blur, $color) {
+  -webkit-filter: drop-shadow($x $y $blur $color);
+  filter: drop-shadow($x $y $blur $color);
+}
+
+@mixin mobile-scrollbar() {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@mixin desktop-scrollbar() {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@mixin desktop-scrollbar() {
+  @include desktop-scrollbar();
+
+  &::-webkit-scrollbar-thumb {
+    background: #cbdaf1;
+    border-radius: 5px;
+  }
+
+  // &::-webkit-scrollbar-thumb:hover {
+  //   background: #555;
+  // }
+}

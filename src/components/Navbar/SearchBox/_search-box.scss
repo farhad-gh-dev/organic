@@ -1,0 +1,14 @@
+.search-box {
+  width: 65px;
+  height: 65px;
+  background-color: $primary_green;
+  border-radius: 65px;
+
+  .search-logo {
+    padding: 10px;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    margin-bottom: 2px;
+  }
+}

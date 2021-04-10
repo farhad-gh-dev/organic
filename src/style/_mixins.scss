@@ -39,3 +39,15 @@
   //   background: #555;
   // }
 }
+
+@mixin basic-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}

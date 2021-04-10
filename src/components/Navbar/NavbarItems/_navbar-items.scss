@@ -1,0 +1,143 @@
+.navbar-items {
+  order: 3;
+
+  @include md-size {
+    order: 2;
+  }
+
+  .search-and-dropdown {
+    display: flex;
+    align-items: center;
+
+    @include md-size {
+      display: none;
+    }
+
+    .dropdown-button {
+      position: relative;
+      margin-left: 15px;
+      padding: 5px 2px;
+
+      div {
+        height: 2px;
+        background-color: black;
+        border-radius: 2px;
+      }
+
+      .middle {
+        width: 20px;
+      }
+
+      .top {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        transition: 0.5s ease-in-out;
+      }
+
+      .bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 10px;
+        transition: 0.5s ease-in-out;
+      }
+
+      &:focus {
+        .top {
+          right: auto;
+          left: 0;
+        }
+
+        .bottom {
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+  }
+
+  .items-container {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+    @include md-size {
+      position: static;
+      display: flex;
+    }
+
+    .nav-item {
+      display: inline-block;
+      margin: 0 0 6px;
+      padding: 6px 10px 4px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: capitalize;
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 2px;
+      white-space: nowrap;
+
+      @include md-size {
+        margin: 0 85px;
+        padding: 10px 15px;
+        font-size: 18px;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+      }
+
+      .dropdown-icon {
+        margin-left: 8px;
+
+        svg {
+          width: 8px;
+
+          @include md-size {
+            width: 15px;
+          }
+        }
+      }
+    }
+
+    .dropdown-container {
+      transition: 1s;
+      position: static;
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 2px;
+
+      @include sm-size() {
+        position: absolute;
+        top: 30px;
+      }
+
+      &.active {
+        height: auto;
+      }
+
+      .nav-item {
+        background-color: rgba(210, 210, 210, 0.5);
+        margin-bottom: 5px;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+@keyframes navbar-top-line {
+  from {
+    text-align: left;
+  }
+  to {
+    text-align: right;
+  }
+}

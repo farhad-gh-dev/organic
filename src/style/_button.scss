@@ -1,4 +1,10 @@
+.custom-button {
+  @include basic-button;
+}
+
 .primary-button {
+  @include basic-button;
+
   font-family: "Antipasto Pro", Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;

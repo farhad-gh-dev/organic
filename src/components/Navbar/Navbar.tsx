@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../../assets/logo/logo.png';
 import {ReactComponent as SignUpIcon} from '../../assets/sign-up.svg';
+import NavbarItems from './NavbarItems/NavbarItems';
 import SearchBox from './SearchBox/SearchBox';
 
 interface Props {
@@ -15,10 +16,8 @@ const Navbar:React.FC<Props> = ({brandName = 'organic', brandLogo}) => {
                 <img src={brandLogo?brandLogo:Logo} alt="brand logo" className="brand-logo"/>
                 <div className="brand-name text-title">{brandName}</div>
             </div>
-            <div>
-                <p>test</p>
-            </div>
-            <div className="buttons-container d-flex align-items-center">
+            <NavbarItems />
+            <div className="buttons-container">
                 <SearchBox />
                 <button className="primary-button sign-up-button">
                     <span>Sign up</span>

@@ -1,6 +1,9 @@
 //FONT
 @import "./fonts";
 
+//BREAKPOINTS
+@import "./breakpoints";
+
 //VARIABLES
 @import "./variables";
 
@@ -19,3 +22,4 @@
 @import "../app";
 @import "../components/Navbar/navbar";
 @import "../components/Navbar/SearchBox/search-box";
+@import "../components/Navbar/NavbarItems/navbar-items";

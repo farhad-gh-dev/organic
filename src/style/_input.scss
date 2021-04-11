@@ -1,0 +1,8 @@
+.custom-input {
+  background-color: transparent;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}

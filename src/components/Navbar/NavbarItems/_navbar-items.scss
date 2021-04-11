@@ -22,6 +22,8 @@
         height: 2px;
         background-color: black;
         border-radius: 2px;
+        transform: translateX(0);
+        transition: 0.4s ease-in-out;
       }
 
       .middle {
@@ -33,7 +35,6 @@
         top: 0;
         right: 0;
         width: 10px;
-        transition: 0.5s ease-in-out;
       }
 
       .bottom {
@@ -41,19 +42,6 @@
         bottom: 0;
         left: 0;
         width: 10px;
-        transition: 0.5s ease-in-out;
-      }
-
-      &:focus {
-        .top {
-          right: auto;
-          left: 0;
-        }
-
-        .bottom {
-          right: 0;
-          left: auto;
-        }
       }
     }
   }
@@ -66,8 +54,13 @@
     margin: 0;
     padding: 0;
     text-align: right;
+    // height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
 
     @include md-size {
+      height: auto !important;
+      overflow: visible !important;
       position: static;
       display: flex;
     }
@@ -113,9 +106,8 @@
       position: static;
       height: 0;
       overflow: hidden;
-      margin-bottom: 2px;
 
-      @include sm-size() {
+      @include md-size() {
         position: absolute;
         top: 30px;
       }
@@ -125,10 +117,29 @@
       }
 
       .nav-item {
-        background-color: rgba(210, 210, 210, 0.5);
+        background-color: rgba(228, 228, 228, 0.5);
         margin-bottom: 5px;
         border-radius: 3px;
       }
+    }
+  }
+
+  &.active {
+    .search-and-dropdown {
+      .dropdown-button {
+        .top {
+          transform: translateX(-140%);
+        }
+
+        .bottom {
+          transform: translateX(140%);
+        }
+      }
+    }
+
+    .items-container {
+      // height: 100%;
+      // transition: 0.3s ease-in-out;
     }
   }
 }

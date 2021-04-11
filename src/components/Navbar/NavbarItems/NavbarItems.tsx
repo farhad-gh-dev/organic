@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import SearchBox from "../SearchBox/SearchBox";
+import NavbarDropdownItem from "./NavbarItem/NavbarDropdownItem";
 import NavbarItem from "./NavbarItem/NavbarItem";
 
 const NavbarItems: React.FC = () => {
   const [active, setActive] = useState<boolean>(false);
 
   return (
-    <div className="navbar-items position-relative">
+    <div className={`navbar-items position-relative${active ? " active" : ""}`}>
       <div className="search-and-dropdown">
         <SearchBox />
         <button
-          className={`dropdown-button custom-button${active ? " active" : ""}`}
+          className="dropdown-button custom-button"
           onClick={() => setActive(!active)}
         >
           <div className="top"></div>
@@ -20,9 +21,13 @@ const NavbarItems: React.FC = () => {
       </div>
       <ul className="items-container">
         <NavbarItem text={"home"} />
-        <NavbarItem
-          text={"products"}
-          dropdown={[{ text: "facewash", link: "#" }]}
+        <NavbarDropdownItem
+          title="products"
+          dropdownItems={[
+            { text: "face wash" },
+            { text: "makeup remover" },
+            { text: "night serom" },
+          ]}
         />
         <NavbarItem text={"about"} />
       </ul>

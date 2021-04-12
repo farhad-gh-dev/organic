@@ -10,12 +10,6 @@ const SearchBox: React.FC = () => {
 
   return (
     <div className="search-box position-relative">
-      <button
-        className="custom-button search-button position-absolute"
-        onClick={() => console.log("clicked")}
-      >
-        <SearchLogo />
-      </button>
       <div className="input-container">
         <input
           className="search-input custom-input"
@@ -24,6 +18,12 @@ const SearchBox: React.FC = () => {
           onChange={(e) => handleInputValue(e)}
         />
       </div>
+      <button
+        className="custom-button search-button position-absolute"
+        onClick={() => console.log("submitted...")}
+      >
+        <SearchLogo />
+      </button>
     </div>
   );
 };

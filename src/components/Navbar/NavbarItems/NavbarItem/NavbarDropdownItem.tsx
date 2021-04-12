@@ -16,14 +16,17 @@ const NavbarDropdownItem: React.FC<Props> = ({ title, dropdownItems }) => {
 
   return (
     <li className="position-relative">
-      <div className="nav-item" onClick={() => setActive(!active)}>
+      <button
+        className="nav-item custom-button cursor-pointer"
+        onClick={() => setActive(!active)}
+      >
         <div className="d-flex align-items-center">
           {title}
           <span className="dropdown-icon">
             <DropdownIcon />
           </span>
         </div>
-      </div>
+      </button>
       <div className={`dropdown-container${active ? " active" : ""}`}>
         {dropdownItems
           ? dropdownItems.map((item) => {

@@ -1,0 +1,9 @@
+.custom-link {
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+
+  &:active {
+    color: black;
+  }
+}

@@ -40,7 +40,28 @@
   // }
 }
 
+@mixin loop-increment($rule, $number, $value) {
+  @for $i from 1 to ($number + 1) {
+    &:nth-child(#{$i}) {
+      -webkit-#{$rule}-delay: (#{$i * $value});
+      #{$rule}-delay: (#{$i * $value});
+    }
+  }
+}
+
+@mixin loop-children($num-of-children, $property: "", $value, $value-fn: "") {
+  @for $i from 1 to ($num-of-children + 1) {
+    &:nth-child(#{$i}) {
+      #{$property}: #{$value-fn }(#{$value});
+    }
+  }
+}
+
+@mixin for-loop($number-of-children, $property, $value, $value-fn) {
+}
+
 @mixin basic-button {
+  font-family: "Antipasto Pro", Arial, Helvetica, sans-serif;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -49,6 +70,6 @@
   &:focus {
     border: none;
     outline: none;
-    outline: 1px solid rgba(0, 0, 0, 0.2);
+    // outline: 1px solid rgba(0, 0, 0, 0.2);
   }
 }

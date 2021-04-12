@@ -7,7 +7,9 @@ interface Props {
 const NavbarItem: React.FC<Props> = ({ text }) => {
   return (
     <li>
-      <div className="nav-item">{text}</div>
+      <a href="#" className="nav-item custom-link">
+        {text}
+      </a>
     </li>
   );
 };

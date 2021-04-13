@@ -16,6 +16,11 @@
   &.flex-column {
     flex-direction: column !important;
   }
+
+  &.item-center {
+    justify-content: center !important;
+    align-items: center !important;
+  }
 }
 
 .flex-fill {

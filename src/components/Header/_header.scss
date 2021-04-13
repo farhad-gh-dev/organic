@@ -1,0 +1,244 @@
+.header {
+  width: 100%;
+  padding: 0 0 0 19px;
+  margin: 35px 0;
+
+  @include md-size {
+    padding: 0 75px 0 65px;
+    margin: 25px 0;
+  }
+
+  .header-container {
+    padding: 125px 0 25px 0px;
+    // border: 1px solid red;
+    @include md-size {
+      padding: 40px 0 65px 85px;
+    }
+
+    .graphic-container {
+      position: absolute;
+      z-index: 0;
+
+      @include md-size {
+        height: 100%;
+        width: 50%;
+        text-align: center;
+      }
+
+      svg {
+        height: 235px;
+        width: 262px;
+
+        @include md-size {
+          height: inherit !important;
+          width: auto;
+        }
+      }
+    }
+
+    .text-area {
+      position: relative;
+      max-width: 300px;
+      z-index: 100;
+
+      @include md-size {
+        max-width: 510px;
+      }
+
+      .half-circles {
+        top: 24px;
+
+        @include md-size {
+          top: 55px;
+        }
+
+        svg {
+          height: 44px;
+          width: 22px;
+
+          @include md-size {
+            height: 70px;
+            width: 35px;
+          }
+        }
+        .graphic-1 {
+          #half-circle {
+            fill: $primary_green;
+          }
+        }
+        .graphic-2 {
+          #half-circle {
+            fill: $secondary_green;
+          }
+        }
+      }
+
+      .title {
+        font-size: 50px;
+        letter-spacing: 0.05em;
+        margin-bottom: 24px;
+        padding-right: 20px;
+
+        @include md-size {
+          padding-right: 0;
+          line-height: 103px;
+          font-size: 100px;
+          margin-bottom: 38px;
+        }
+      }
+
+      .description {
+        font-size: 18px;
+        letter-spacing: 0.09em;
+        line-height: 20px;
+        margin-bottom: 35px;
+        padding-left: 10px;
+
+        @include md-size {
+          font-size: 21px;
+          line-height: 37px;
+          padding-right: 50px;
+          margin-bottom: 77px;
+          padding-left: 0;
+        }
+      }
+    }
+
+    .buttons-container {
+      position: relative;
+      justify-content: space-between;
+      padding-right: 40px;
+      z-index: 100;
+
+      @include md-size {
+        justify-content: unset;
+        margin-bottom: 18px;
+        width: 510px;
+      }
+
+      .explore-button {
+        display: inline-block;
+
+        button {
+          padding: 16px;
+          font-size: 16px;
+
+          @include md-size {
+            padding: 23px 22px;
+            font-size: 18px;
+          }
+
+          span {
+            margin-top: 5px;
+            letter-spacing: 0.05em;
+
+            @include md-size {
+              margin-top: 2px;
+            }
+          }
+
+          .button-icon {
+            svg {
+              width: 20px;
+            }
+          }
+        }
+      }
+
+      .video-button {
+        display: flex;
+        align-items: center;
+        margin-top: 33px;
+
+        @include md-size {
+          margin-top: 0;
+        }
+
+        button {
+          @include md-size {
+            margin-left: 60px;
+            align-items: center;
+          }
+
+          .button-icon {
+            padding: 12px;
+            background-color: $primary_green;
+            border-radius: 100%;
+
+            @include md-size {
+              padding: 23px;
+            }
+
+            svg {
+              width: 15px;
+              height: 15px;
+
+              @include md-size {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+          span {
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            margin-left: 9px;
+
+            @include md-size {
+              font-size: 18px;
+              margin-left: 18px;
+            }
+          }
+        }
+      }
+
+      .buttons-graphic {
+        bottom: -25px;
+        left: -10px;
+
+        @include md-size {
+          bottom: -95px;
+          left: -120px;
+        }
+
+        svg {
+          width: 60px;
+          height: auto;
+
+          @include md-size {
+            width: 160px;
+          }
+
+          path {
+            stroke-width: 3px;
+
+            @include md-size {
+              stroke-width: 2px;
+            }
+          }
+        }
+      }
+
+      .buttons-graphic-2 {
+        top: -22px;
+        right: 35px;
+        @include drop-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.25));
+        transform: rotate(-13.99deg);
+
+        @include md-size {
+          top: 18px;
+          right: -45px;
+          @include drop-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.25));
+        }
+
+        .graphic-element {
+          width: 40px;
+
+          @include md-size {
+            width: 88px;
+          }
+        }
+      }
+    }
+  }
+}

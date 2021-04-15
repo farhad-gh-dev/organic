@@ -1,12 +1,12 @@
 import React from "react";
 import { ReactComponent as QuarterCircle } from "../../../assets/quarter-circle.svg";
-import ModelProduct1 from "../../../assets/images/model-product-1.png";
 
 interface Props {
   cardData: {
     title: string;
     description: string;
     price: string;
+    background: string;
     image: string;
   };
 }
@@ -14,7 +14,9 @@ interface Props {
 const ItemCard: React.FC<Props> = ({ cardData }) => {
   return (
     <div className="item-card d-flex align-items-center">
-      <div className="card-image position-relative d-flex">
+      <div
+        className={`card-image position-relative d-flex ${cardData.background}`}
+      >
         <QuarterCircle />
         <img
           src={cardData.image}

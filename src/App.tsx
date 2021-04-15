@@ -1,14 +1,14 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
-import ItemsCarousel from "./components/ItemsCarousel/ItemsCarousel";
+import Carousel from "./components/Carousel/Carousel";
 
 const App: React.FC = () => {
   return (
     <div className="app">
       <Navbar />
       <Header />
-      <ItemsCarousel />
+      <Carousel />
     </div>
   );
 };

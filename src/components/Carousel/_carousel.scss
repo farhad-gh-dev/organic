@@ -1,0 +1,183 @@
+.carousel {
+  padding: 20px 0;
+  margin: 0 30px;
+  margin-bottom: 50px;
+  flex-direction: column;
+
+  @include md-size {
+    padding: 0;
+    margin: 0 0 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .carousel-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+
+    @include md-size {
+      width: 200px;
+      font-size: 33px;
+      margin-bottom: 0;
+      margin-right: 70px;
+      align-self: center;
+    }
+  }
+
+  .carousel-body {
+    .slides-container {
+      position: relative;
+      width: 311px;
+      overflow: hidden;
+
+      @include md-size {
+        width: 800px;
+      }
+
+      .wrapper {
+        display: flex;
+        position: relative;
+        transition: 0.5s ease-in-out;
+      }
+
+      .item-card {
+        padding-top: 25px;
+
+        @include md-size {
+          padding-top: 40px;
+          margin-right: 21px;
+        }
+
+        .card-image {
+          padding-right: 15px;
+          margin-right: 5px;
+
+          @include md-size {
+            padding-right: 21px;
+          }
+
+          svg {
+            width: 116px;
+            height: 116px;
+
+            @include md-size {
+              width: 178px;
+              height: 178px;
+            }
+          }
+
+          img {
+            width: calc(100% - 8px);
+            bottom: 5px;
+            right: 0;
+            @include drop-shadow(3px, 2px, 5px, rgba(0, 0, 0, 0.2));
+
+            @include md-size {
+              width: calc(100% - 13px);
+              bottom: 10px;
+              @include drop-shadow(5px, 5px, 10px, rgba(0, 0, 0, 0.2));
+            }
+          }
+
+          &.light {
+            svg {
+              path {
+                fill: $secondary-green;
+              }
+            }
+          }
+
+          &.dark {
+            svg {
+              path {
+                fill: $primary-green;
+              }
+            }
+          }
+        }
+
+        .text-area {
+          width: 175px;
+
+          .card-title,
+          .card-price {
+            font-size: 18px;
+            @include md-size {
+              font-size: 23px;
+            }
+          }
+
+          .card-title {
+            padding-right: 80px;
+            margin-bottom: 11px;
+
+            @include md-size {
+              padding-right: 50px;
+            }
+          }
+
+          .card-description {
+            font-size: 13px;
+            line-height: 15px;
+            margin-bottom: 12px;
+            height: 45px;
+
+            @include md-size {
+              font-size: 12px;
+              line-height: 18px;
+              margin-bottom: 15px;
+              height: 55px;
+            }
+          }
+        }
+      }
+    }
+
+    .control-buttons {
+      position: absolute;
+      top: 25px;
+      right: 0px;
+
+      @include md-size {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 20px;
+      }
+
+      .next,
+      .prev {
+        width: 25px;
+        height: 25px;
+        background-color: $button_background_color;
+        border-radius: 100%;
+
+        @include md-size {
+          width: 45px;
+          height: 45px;
+        }
+
+        svg {
+          width: 6px;
+          height: auto;
+
+          @include md-size {
+            width: 10px;
+            margin-top: 3px;
+          }
+        }
+      }
+
+      .prev {
+        margin-right: 10px;
+
+        @include md-size {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

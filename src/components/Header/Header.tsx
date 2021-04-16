@@ -14,7 +14,7 @@ const Header: React.FC = () => {
           <GlassGraphic />
         </div>
 
-        <div className="text-area p-relative">
+        <div className="text-area">
           <div className="half-circles position-absolute from-left">
             <span className="graphic-1">
               <HalfCircleGraphic />
@@ -23,8 +23,8 @@ const Header: React.FC = () => {
               <HalfCircleGraphic />
             </span>
           </div>
-          <h1 className="title text-title">It's all organic here</h1>
-          <p className="description text-paragraph">
+          <h1 className="title text-title p-relative">It's all organic here</h1>
+          <p className="description text-paragraph p-relative">
             An Organic product is made from materials producted by organic
             agriculture
           </p>

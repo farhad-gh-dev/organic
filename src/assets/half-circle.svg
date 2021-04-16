@@ -1,10 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="80" viewBox="0 0 40 80">
-  <defs>
-    <clipPath id="clip-path">
-      <rect x="40" width="40" height="80" fill="none"/>
-    </clipPath>
-  </defs>
-  <g id="Scroll_Group_1" data-name="Scroll Group 1" transform="translate(-40)" clip-path="url(#clip-path)" style="isolation: isolate">
-    <path id="half-circle" data-name="Path 4" d="M40,0A40,40,0,1,1,0,40,40,40,0,0,1,40,0Z"/>
-  </g>
+<svg width="35" height="70" viewBox="0 0 35 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="half-circle" d="M-1.5299e-06 70C9.28258 70 18.185 66.3125 24.7487 59.7487C31.3125 53.185 35 44.2826 35 35C35 25.7174 31.3125 16.815 24.7487 10.2513C18.185 3.68749 9.28258 1.80739e-06 6.81475e-06 0L0 35L-1.5299e-06 70Z" fill="#D2E9CD"/>
 </svg>

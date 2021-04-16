@@ -1,0 +1,35 @@
+.graphics {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+
+  .graphic-1 {
+    position: absolute;
+    top: 35px;
+    right: -3px;
+
+    @include md-size {
+      top: 55px;
+      right: -10px;
+    }
+
+    svg {
+      width: 70px;
+      height: auto;
+
+      @include md-size {
+        width: 120px;
+      }
+
+      #top-half {
+        fill: $secondary-green;
+      }
+      #bottom-half {
+        fill: $primary-green;
+      }
+    }
+  }
+}

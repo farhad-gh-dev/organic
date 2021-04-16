@@ -51,7 +51,7 @@ const Carousel: React.FC = () => {
   const nextSlideHandler = () => {
     //if screen width is more than medium
     if (screenWidth > breakpoint) {
-      if (activeSlide >= cardsData.length - 1 / 2) return;
+      if (activeSlide >= cardsData.length / 2 - 1) return;
 
       setActiveSlide(activeSlide + 1);
       return;

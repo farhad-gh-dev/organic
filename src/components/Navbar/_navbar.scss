@@ -3,7 +3,19 @@
   padding: 28px 30px;
   z-index: 1000;
 
-  @include md-size() {
+  @include sm-size {
+    padding: 28px 50px;
+  }
+
+  @include md-size {
+    padding: 28px 90px;
+  }
+
+  @include lg-size {
+    padding: 30px 60px 15px;
+  }
+
+  @include xl-size {
     padding: 30px 140px 15px;
   }
 
@@ -14,7 +26,7 @@
       width: 17px;
       margin-right: 7px;
 
-      @include md-size {
+      @include sm-size {
         width: 25px;
       }
     }
@@ -22,7 +34,7 @@
       font-size: 20px;
       letter-spacing: 0.05em;
 
-      @include md-size {
+      @include sm-size {
         font-size: 26px;
       }
     }
@@ -32,11 +44,11 @@
     display: none;
     order: 2;
 
-    @include md-size {
+    @include lg-size {
       order: 3;
     }
 
-    @include md-size {
+    @include lg-size {
       display: flex;
       align-items: center;
     }
@@ -44,7 +56,11 @@
     .sign-up-button {
       padding-left: 42px;
       padding-right: 42px;
-      margin-left: 60px;
+      margin-left: 30px;
+
+      @include xl-size {
+        margin-left: 60px;
+      }
 
       span {
         font-size: 21px;

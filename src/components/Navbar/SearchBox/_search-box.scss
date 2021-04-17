@@ -10,7 +10,13 @@
   overflow: hidden;
   transition: 0.2s ease-in-out;
 
-  @include md-size {
+  @include sm-size {
+    padding-right: 45px;
+    width: 45px;
+    height: 45px;
+  }
+
+  @include lg-size {
     padding-right: 65px;
     width: 65px;
     height: 65px;
@@ -25,9 +31,14 @@
     margin-top: 2px;
     cursor: pointer;
 
-    @include md-size {
+    @include sm-size {
+      padding: 14px;
+      margin-top: 0;
+      margin-bottom: 1px;
+    }
+
+    @include lg-size {
       padding: 22px;
-      right: 0px;
       margin-top: 0;
       margin-bottom: 1px;
     }
@@ -35,7 +46,11 @@
     svg {
       width: 12px;
 
-      @include md-size {
+      @include sm-size {
+        width: 16px;
+      }
+
+      @include lg-size {
         width: 21px;
       }
     }
@@ -49,7 +64,12 @@
       padding: 5px 0 5px 10px;
       font-size: 13px;
 
-      @include md-size {
+      @include sm-size {
+        padding: 10px 0 10px 15px;
+        font-size: 16px;
+      }
+
+      @include lg-size {
         padding: 15px 0 15px 20px;
         font-size: 20px;
       }
@@ -63,7 +83,11 @@
   &:hover {
     width: 130px;
 
-    @include md-size {
+    @include sm-size {
+      width: 205px;
+    }
+
+    @include lg-size {
       width: 280px;
     }
 

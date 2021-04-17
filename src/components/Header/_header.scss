@@ -25,6 +25,8 @@
       }
 
       svg {
+        position: absolute;
+        right: 0;
         height: 235px;
         width: 262px;
 
@@ -141,7 +143,7 @@
 
       @include md-size {
         justify-content: unset;
-        padding-left: 85px;
+        padding: 0;
         margin-bottom: 18px;
         width: 595px;
       }
@@ -163,7 +165,7 @@
             letter-spacing: 0.05em;
 
             @include md-size {
-              margin-top: 2px;
+              margin-top: 3px;
             }
           }
 

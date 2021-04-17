@@ -1,5 +1,7 @@
 .navbar {
+  position: relative;
   padding: 28px 30px;
+  z-index: 1000;
 
   @include md-size() {
     padding: 30px 140px 15px;

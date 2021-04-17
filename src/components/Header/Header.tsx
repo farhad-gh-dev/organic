@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactComponent as GlassGraphic } from "../../assets/glass-graphic.svg";
+import { ReactComponent as DonutGraphic } from "../../assets/donut.svg";
 import { ReactComponent as HalfCircleGraphic } from "../../assets/half-circle.svg";
 import { ReactComponent as ExploreIcon } from "../../assets/explore.svg";
 import { ReactComponent as PlayButtonIcon } from "../../assets/play-button-icon.svg";
@@ -10,8 +11,11 @@ const Header: React.FC = () => {
   return (
     <div className="header">
       <div className="header-container position-relative">
-        <div className="graphic-container position-absolute from-top from-right ">
+        <div className="graphic-container position-absolute from-top from-right">
           <GlassGraphic />
+          <div className="donut-graphic">
+            <DonutGraphic />
+          </div>
         </div>
 
         <div className="text-area">

@@ -32,4 +32,24 @@
       }
     }
   }
+
+  .graphic-2 {
+    display: none;
+    position: absolute;
+    top: 15vh;
+    left: 50vw;
+
+    @include md-size {
+      display: block;
+    }
+
+    svg {
+      width: 70px;
+      height: auto;
+
+      path {
+        fill: $primary-green;
+      }
+    }
+  }
 }

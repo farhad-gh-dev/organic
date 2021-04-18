@@ -3,14 +3,38 @@
   padding: 0 0 0 19px;
   margin: 35px 0 0;
 
+  @include sm-size {
+    padding: 0 20px 0 40px;
+    margin: 25px 0 30px;
+  }
+
   @include md-size {
+    padding: 0 40px 0 60px;
+    margin-bottom: 80px;
+  }
+
+  @include lg-size {
+    padding: 0 10px 0 25px;
+    margin-bottom: 90px;
+  }
+
+  @include xl-size {
     padding: 0 75px 0 65px;
-    margin: 25px 0 90px;
+  }
+
+  @include xxl-size {
+    max-width: 1700px;
+    margin: 25px auto 90px;
   }
 
   .header-container {
     padding: 0 0 25px 0px;
-    @include md-size {
+
+    @include lg-size {
+      padding: 30px 0 65px 55px;
+    }
+
+    @include xl-size {
       padding: 40px 0 65px 85px;
     }
 
@@ -18,21 +42,29 @@
       position: absolute;
       z-index: 0;
 
-      @include md-size {
+      @include lg-size {
         height: 100%;
-        width: 50%;
-        text-align: center;
+      }
+
+      @include xl-size {
+        text-align: right;
       }
 
       svg {
-        position: absolute;
-        right: 0;
         height: 235px;
         width: 262px;
 
-        @include md-size {
-          height: inherit !important;
+        @include sm-size {
+          height: 350px;
           width: auto;
+        }
+
+        @include md-size {
+          height: 450px;
+        }
+
+        @include lg-size {
+          height: inherit !important;
         }
       }
 
@@ -42,19 +74,30 @@
         left: 12%;
         z-index: -100;
 
-        @include md-size {
-          bottom: -12%;
-          left: 25%;
+        @include sm-size {
+          bottom: -15%;
+          left: 15%;
+        }
+
+        @include xl-size {
+          bottom: -15%;
+          left: 18%;
         }
 
         svg {
           width: 105px;
           height: auto;
 
+          @include sm-size {
+            width: 135px;
+          }
+
           @include md-size {
+            width: 175px;
+          }
+
+          @include lg-size {
             width: 210px;
-            height: inherit !important;
-            width: auto;
           }
 
           path {
@@ -65,29 +108,36 @@
     }
 
     .text-area {
-      max-width: 300px;
+      width: 100%;
       padding-top: 125px;
       z-index: 100;
 
-      @include md-size {
-        max-width: 600px;
+      @include sm-size {
+        padding-top: 150px;
+      }
+
+      @include lg-size {
         padding-top: 0;
       }
 
       .half-circles {
         top: 24px;
 
-        @include md-size {
+        @include lg-size {
           top: 55px;
         }
 
         svg {
           height: 44px;
-          width: 22px;
+          width: auto;
 
-          @include md-size {
+          @include lg-size {
+            height: 50px;
+          }
+
+          @include xl-size {
             height: 70px;
-            width: 35px;
+            width: auto;
           }
         }
         .graphic-1 {
@@ -102,6 +152,14 @@
         }
       }
 
+      .title,
+      .description {
+        max-width: 300px;
+        @include lg-size {
+          max-width: 600px;
+        }
+      }
+
       .title {
         position: relative;
         font-size: 50px;
@@ -109,8 +167,13 @@
         margin-bottom: 24px;
         padding-right: 20px;
 
-        @include md-size {
-          padding-right: 0;
+        @include lg-size {
+          padding-right: 50px;
+          line-height: 95px;
+          font-size: 75px;
+        }
+
+        @include xl-size {
           line-height: 103px;
           font-size: 100px;
           margin-bottom: 38px;
@@ -125,149 +188,176 @@
         margin-bottom: 35px;
         padding-left: 10px;
 
-        @include md-size {
+        @include lg-size {
           font-size: 21px;
           line-height: 37px;
-          padding-right: 50px;
+          padding-right: 100px;
           margin-bottom: 77px;
-          padding-left: 0;
+          padding-left: 0px;
         }
-      }
-    }
 
-    .buttons-container {
-      position: relative;
-      justify-content: space-between;
-      padding-right: 40px;
-      z-index: 100;
-
-      @include md-size {
-        justify-content: unset;
-        padding: 0;
-        margin-bottom: 18px;
-        width: 595px;
-      }
-
-      .explore-button {
-        display: inline-block;
-
-        button {
-          padding: 16px;
-          font-size: 16px;
-
-          @include md-size {
-            padding: 23px 22px;
-            font-size: 18px;
-          }
-
-          span {
-            margin-top: 5px;
-            letter-spacing: 0.05em;
-
-            @include md-size {
-              margin-top: 3px;
-            }
-          }
-
-          .button-icon {
-            svg {
-              width: 20px;
-            }
-          }
+        @include xl-size {
+          padding-right: 50px;
         }
       }
 
-      .video-button {
-        display: flex;
-        align-items: center;
-        margin-top: 33px;
+      .buttons-container {
+        position: relative;
+        max-width: 360px;
+        justify-content: space-between;
+        padding-right: 40px;
+        z-index: 100;
 
-        @include md-size {
-          margin-top: 0;
+        @include lg-size {
+          max-width: 595px;
+          justify-content: unset;
+          padding: 0;
+          margin-bottom: 18px;
         }
 
-        button {
-          @include md-size {
-            margin-left: 60px;
-            align-items: center;
-          }
+        .explore-button {
+          display: inline-block;
 
-          .button-icon {
-            padding: 12px;
-            background-color: $primary_green;
-            border-radius: 100%;
+          button {
+            padding: 16px;
+            font-size: 16px;
 
-            @include md-size {
-              padding: 23px;
+            @include lg-size {
+              padding: 23px 22px;
+              font-size: 18px;
             }
 
-            svg {
-              width: 15px;
-              height: 15px;
+            span {
+              margin-top: 5px;
+              letter-spacing: 0.05em;
 
-              @include md-size {
+              @include lg-size {
+                margin-top: 3px;
+              }
+            }
+
+            .button-icon {
+              svg {
                 width: 20px;
-                height: 20px;
               }
             }
           }
-          span {
-            font-size: 14px;
-            letter-spacing: 0.05em;
-            margin-left: 9px;
+        }
 
-            @include md-size {
-              font-size: 18px;
-              margin-left: 18px;
+        .video-button {
+          display: flex;
+          align-items: center;
+          margin-top: 33px;
+
+          @include lg-size {
+            margin-top: 0;
+          }
+
+          button {
+            @include lg-size {
+              margin-left: 60px;
+              align-items: center;
+            }
+
+            .button-icon {
+              padding: 12px;
+              background-color: $primary_green;
+              border-radius: 100%;
+
+              @include lg-size {
+                padding: 23px;
+              }
+
+              svg {
+                width: 15px;
+                height: 15px;
+
+                @include lg-size {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+            }
+            span {
+              font-size: 14px;
+              letter-spacing: 0.05em;
+              margin-left: 9px;
+
+              @include lg-size {
+                font-size: 18px;
+                margin-left: 18px;
+              }
             }
           }
         }
-      }
 
-      .buttons-graphic {
-        bottom: -25px;
-        left: -10px;
-
-        @include md-size {
-          bottom: -95px;
-          left: -30px;
-        }
-
-        svg {
-          width: 60px;
-          height: auto;
+        .buttons-graphic {
+          bottom: -25px;
+          left: -10px;
 
           @include md-size {
-            width: 160px;
+            bottom: -45px;
+            left: -45px;
           }
 
-          path {
-            stroke-width: 3px;
+          @include lg-size {
+            bottom: -60px;
+          }
+
+          @include xl-size {
+            bottom: -95px;
+            left: -110px;
+          }
+
+          svg {
+            width: 60px;
+            height: auto;
 
             @include md-size {
-              stroke-width: 2px;
+              width: 100px;
+            }
+
+            @include xl-size {
+              width: 160px;
+            }
+
+            path {
+              stroke-width: 3px;
+
+              @include xl-size {
+                stroke-width: 2px;
+              }
             }
           }
         }
-      }
 
-      .buttons-graphic-2 {
-        top: -22px;
-        right: 35px;
-        @include drop-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.25));
-        transform: rotate(-13.99deg);
+        .buttons-graphic-2 {
+          top: -13px;
+          right: 25px;
+          @include drop-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.25));
+          transform: rotate(-13.99deg);
 
-        @include md-size {
-          top: 18px;
-          right: -45px;
-          @include drop-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.25));
-        }
+          @include sm-size {
+            right: -30px;
+          }
 
-        .graphic-element {
-          width: 40px;
+          @include lg-size {
+            top: -30px;
+            right: 50px;
+            @include drop-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.25));
+          }
 
-          @include md-size {
-            width: 88px;
+          @include xl-size {
+            top: -18px;
+            right: -45px;
+          }
+
+          .graphic-element {
+            width: 40px;
+
+            @include lg-size {
+              width: 88px;
+            }
           }
         }
       }

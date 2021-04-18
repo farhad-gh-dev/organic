@@ -32,33 +32,33 @@ const Header: React.FC = () => {
             An Organic product is made from materials producted by organic
             agriculture
           </p>
-        </div>
 
-        <div className="buttons-container position-relative d-flex">
-          <div className="explore-button">
-            <button className=" primary-button">
-              <span className="text-cap">explore now</span>
-              <div className="button-icon">
-                <ExploreIcon />
-              </div>
-            </button>
-          </div>
+          <div className="buttons-container position-relative d-flex">
+            <div className="explore-button">
+              <button className=" primary-button">
+                <span className="text-cap">explore now</span>
+                <div className="button-icon">
+                  <ExploreIcon />
+                </div>
+              </button>
+            </div>
 
-          <div className="video-button">
-            <button className="custom-button d-flex align-items-center">
-              <div className="button-icon custom-button d-flex item-center">
-                <PlayButtonIcon />
-              </div>
-              <span className="text-cap">see video</span>
-            </button>
-          </div>
+            <div className="video-button">
+              <button className="custom-button d-flex align-items-center">
+                <div className="button-icon custom-button d-flex item-center">
+                  <PlayButtonIcon />
+                </div>
+                <span className="text-cap">see video</span>
+              </button>
+            </div>
 
-          <div className="buttons-graphic position-absolute">
-            <ArrowGraphic />
-          </div>
+            <div className="buttons-graphic position-absolute">
+              <ArrowGraphic />
+            </div>
 
-          <div className="buttons-graphic-2 position-absolute">
-            <img src={LeafImage} alt="leaf" className="graphic-element" />
+            <div className="buttons-graphic-2 position-absolute">
+              <img src={LeafImage} alt="leaf" className="graphic-element" />
+            </div>
           </div>
         </div>
       </div>

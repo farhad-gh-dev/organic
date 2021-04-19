@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 0;
 
   .graphic-1 {
@@ -53,6 +53,34 @@
 
       path {
         fill: $primary-green;
+      }
+    }
+  }
+
+  .graphic-3 {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    right: -170px;
+
+    @include sm-size {
+      display: block;
+    }
+
+    @include md-size {
+      bottom: -150px;
+    }
+
+    @include lg-size {
+      display: none;
+    }
+
+    svg {
+      width: 400px;
+      height: auto;
+
+      path {
+        fill: rgba($secondary_green, 0.4);
       }
     }
   }

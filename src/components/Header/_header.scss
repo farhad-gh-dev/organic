@@ -205,8 +205,12 @@
         position: relative;
         max-width: 360px;
         justify-content: space-between;
-        padding-right: 40px;
+        padding-right: 20px;
         z-index: 100;
+
+        @include xs-size {
+          padding-right: 40px;
+        }
 
         @include lg-size {
           max-width: 595px;

@@ -63,9 +63,9 @@ const Carousel: React.FC = () => {
   };
 
   return (
-    <div className="carousel d-flex">
+    <div className="carousel">
       <div className="carousel-title text-title">Recommended for you</div>
-      <div className="carousel-body position-relative d-flex">
+      <div className="carousel-body position-relative">
         <div className="slides-container">
           <div className="wrapper" style={{ left: `-${activeSlide * 100}%` }}>
             {cardsData.map((item) => {

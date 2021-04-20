@@ -1,0 +1,119 @@
+.video-panel {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 0 20px;
+
+  @include sm-size {
+    padding: 0 50px;
+  }
+
+  @include md-size {
+    padding: 0 70px;
+  }
+
+  @include lg-size {
+    padding: 0 120px;
+  }
+
+  .video-container {
+    aspect-ratio: 2.35 / 1;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    background-color: #141414;
+
+    video {
+      height: 100%;
+      z-index: 50;
+    }
+
+    .control-buttons {
+      display: none;
+
+      .play-button {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 100%;
+        z-index: 100;
+
+        @include md-size {
+          width: 100px;
+          height: 100px;
+        }
+
+        #play-icon {
+          margin-left: 5px;
+
+          @include md-size {
+            margin-left: 10px;
+          }
+        }
+
+        svg {
+          width: auto;
+          height: 25px;
+
+          @include md-size {
+            height: auto;
+          }
+        }
+      }
+
+      .fullscreen-button {
+        bottom: 10px;
+        right: 10px;
+        z-index: 100;
+
+        @include md-size {
+          bottom: 30px;
+          right: 30px;
+        }
+      }
+
+      .volume-container {
+        bottom: 10px;
+        left: 20px;
+        z-index: 100;
+
+        @include md-size {
+          bottom: 30px;
+          left: 30px;
+        }
+
+        .mute-button {
+          bottom: 30px;
+          right: 30px;
+          margin-right: 5px;
+
+          @include md-size {
+            margin-right: 15px;
+          }
+        }
+
+        input {
+          width: 100px;
+          display: none;
+        }
+
+        @include md-size {
+          &:hover {
+            input {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .control-buttons {
+        display: block;
+      }
+    }
+  }
+
+  .close-button {
+    top: 33px;
+    right: 38px;
+  }
+}

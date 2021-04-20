@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+
+import VideoPanel from "../VideoPanel/VideoPanel";
 import { ReactComponent as GlassGraphic } from "../../assets/glass-graphic.svg";
 import { ReactComponent as DonutGraphic } from "../../assets/donut.svg";
 import { ReactComponent as HalfCircleGraphic } from "../../assets/half-circle.svg";
@@ -8,8 +10,15 @@ import { ReactComponent as ArrowGraphic } from "../../assets/arrow.svg";
 import LeafImage from "../../assets/images/leaf.png";
 
 const Header: React.FC = () => {
+  const [showVideoPanel, setShowVideoPanel] = useState(false);
+
+  const closeHandler = () => {
+    setShowVideoPanel(false);
+  };
+
   return (
     <div className="header">
+      {showVideoPanel && <VideoPanel closeHandler={closeHandler} />}
       <div className="header-container position-relative">
         <div className="graphic-container position-absolute from-top from-right">
           <GlassGraphic />
@@ -44,7 +53,10 @@ const Header: React.FC = () => {
             </div>
 
             <div className="video-button">
-              <button className="custom-button d-flex align-items-center">
+              <button
+                className="custom-button d-flex align-items-center"
+                onClick={() => setShowVideoPanel(true)}
+              >
                 <div className="button-icon custom-button d-flex item-center">
                   <PlayButtonIcon />
                 </div>

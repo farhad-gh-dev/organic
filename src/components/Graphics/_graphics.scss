@@ -37,14 +37,10 @@
     display: none;
     position: absolute;
     top: 190px;
-    left: 55%;
+    left: 47%;
 
-    @include lg-size {
+    @include xl-size {
       display: unset;
-    }
-
-    @include lg-size {
-      left: 50%;
     }
 
     svg {

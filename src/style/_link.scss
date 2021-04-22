@@ -6,4 +6,12 @@
   &:active {
     color: black;
   }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid black;
+  }
 }

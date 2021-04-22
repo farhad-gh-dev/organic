@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="72.132" height="30.908" viewBox="0 0 72.132 30.908">
   <g id="pointer" transform="translate(-1087.605 -55.664)">
-    <path id="Path_6" data-name="Path 6" d="M1089.176,60.658a41.748,41.748,0,0,0,0,13.16c1.223,6.121,2.446,7.5,2.446,7.5s3.058,9.487,11.008,0,9.785-10.864,9.785-10.864,7.491-7.957,11.008.612,4.128,9.334,4.128,9.334,3.975,11.17,12.689,0,5.2-6.58,5.2-6.58l3.382-4.666,2.275-3.138,5.2-7.5" transform="translate(0 0)" fill="none" stroke="#b9e1d6" stroke-linecap="round" stroke-width="2"/>
-    <path id="Path_7" data-name="Path 7" d="M1143.062,62.387l11.316-3.722,1.489,13.4" transform="translate(2.766 -2)" fill="none" stroke="#b9e1d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="line" data-name="Path 6" d="M1089.176,60.658a41.748,41.748,0,0,0,0,13.16c1.223,6.121,2.446,7.5,2.446,7.5s3.058,9.487,11.008,0,9.785-10.864,9.785-10.864,7.491-7.957,11.008.612,4.128,9.334,4.128,9.334,3.975,11.17,12.689,0,5.2-6.58,5.2-6.58l3.382-4.666,2.275-3.138,5.2-7.5" transform="translate(0 0)" fill="none" stroke="#b9e1d6" stroke-linecap="round" stroke-width="2"/>
+    <path id="tip" data-name="Path 7" d="M1143.062,62.387l11.316-3.722,1.489,13.4" transform="translate(2.766 -2)" fill="none" stroke="#b9e1d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
 </svg>

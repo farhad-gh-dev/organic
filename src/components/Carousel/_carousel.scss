@@ -24,6 +24,10 @@
     font-size: 22px;
     margin-bottom: 10px;
     padding-left: 10px;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: carousel-title 0.8s ease-out forwards;
+    animation-delay: 1.2s;
 
     @include xs-size {
       padding-left: 0;
@@ -83,6 +87,16 @@
 
       .item-card {
         padding-top: 25px;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: carousel-card 0.8s ease-out forwards;
+
+        &:nth-child(1) {
+          animation-delay: 1.5s;
+        }
+        &:nth-child(2) {
+          animation-delay: 1.8s;
+        }
 
         @include sm-size {
           padding-top: 40px;
@@ -286,6 +300,17 @@
         }
       }
 
+      .next {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: carousel-control-button 0.7s ease-out forwards;
+        animation-delay: 1.9s;
+
+        @include md-size {
+          animation-delay: 2.2s;
+        }
+      }
+
       .prev {
         margin-right: 10px;
 
@@ -295,5 +320,26 @@
         }
       }
     }
+  }
+}
+
+@keyframes carousel-title {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes carousel-card {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes carousel-control-button {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

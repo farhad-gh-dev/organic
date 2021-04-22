@@ -1,6 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
-import NavbarAnimations from "./_navbar_animations";
 import Logo from "../../assets/logo/logo.png";
 import { ReactComponent as SignUpIcon } from "../../assets/sign-up.svg";
 import NavbarItems from "./NavbarItems/NavbarItems";
@@ -14,9 +12,7 @@ interface Props {
 const Navbar: React.FC<Props> = ({ brandName = "organic", brandLogo }) => {
   return (
     <div className="navbar d-flex justify-space-between align-items-center">
-      <motion.a
-        initial={NavbarAnimations.brand.start}
-        animate={NavbarAnimations.brand.end}
+      <a
         href="#"
         className="brand-container custom-link d-flex align-items-center"
       >
@@ -26,15 +22,11 @@ const Navbar: React.FC<Props> = ({ brandName = "organic", brandLogo }) => {
           className="brand-logo"
         />
         <div className="brand-name text-title">{brandName}</div>
-      </motion.a>
+      </a>
 
       <NavbarItems />
 
-      <motion.div
-        initial={NavbarAnimations.signUpSearch.start}
-        animate={NavbarAnimations.signUpSearch.end}
-        className="buttons-container"
-      >
+      <div className="buttons-container">
         <SearchBox />
         <button className="primary-button sign-up-button">
           <span>Sign up</span>
@@ -42,7 +34,7 @@ const Navbar: React.FC<Props> = ({ brandName = "organic", brandLogo }) => {
             <SignUpIcon />
           </div>
         </button>
-      </motion.div>
+      </div>
     </div>
   );
 };

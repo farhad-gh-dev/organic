@@ -74,4 +74,8 @@
     outline: none;
     // outline: 1px solid rgba(0, 0, 0, 0.2);
   }
+
+  &:focus-visible {
+    outline: 1px solid black;
+  }
 }

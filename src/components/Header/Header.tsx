@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import VideoPanel from "../VideoPanel/VideoPanel";
 import { ReactComponent as GlassGraphic } from "../../assets/glass-graphic.svg";
 import { ReactComponent as DonutGraphic } from "../../assets/donut.svg";

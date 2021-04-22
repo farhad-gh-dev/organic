@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import NavbarAnimations from "../../_navbar_animations";
 import { ReactComponent as DropdownIcon } from "../../../../assets/dropdown.svg";
 
 interface DropdownItem {
@@ -18,9 +16,7 @@ const NavbarDropdownItem: React.FC<Props> = ({ title, dropdownItems }) => {
 
   return (
     <li className="position-relative">
-      <motion.button
-        initial={NavbarAnimations.navbarItems.start}
-        animate={NavbarAnimations.navbarItems.end}
+      <button
         className="nav-item custom-button cursor-pointer"
         onClick={() => setActive(!active)}
       >
@@ -30,7 +26,7 @@ const NavbarDropdownItem: React.FC<Props> = ({ title, dropdownItems }) => {
             <DropdownIcon />
           </span>
         </div>
-      </motion.button>
+      </button>
       <div className={`dropdown-container${active ? " active" : ""}`}>
         {dropdownItems
           ? dropdownItems.map((item) => {

@@ -9,6 +9,9 @@
   .search-and-dropdown {
     display: flex;
     align-items: center;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: dropdown-search 0.7s ease-out forwards;
 
     @include lg-size {
       display: none;
@@ -100,6 +103,9 @@
       border: 1px solid rgba(0, 0, 0, 0.08);
       border-radius: 2px;
       white-space: nowrap;
+      opacity: 0;
+      transform: translateY(-25px);
+      animation: navbar-item 0.7s ease-out forwards;
 
       @include sm-size {
         margin: 0 0 8px;
@@ -138,7 +144,7 @@
       overflow: hidden;
 
       @include lg-size() {
-        margin-top: 8px;
+        margin-top: 18px;
         position: absolute;
         top: 30px;
       }
@@ -147,6 +153,9 @@
         background-color: rgba(228, 228, 228, 0.5);
         margin-bottom: 5px;
         border-radius: 3px;
+        opacity: 1;
+        transform: translateY(0);
+        animation: none;
 
         @include lg-size {
           visibility: hidden;
@@ -206,11 +215,17 @@
   }
 }
 
-@keyframes navbar-top-line {
-  from {
-    text-align: left;
-  }
+//animations
+@keyframes dropdown-search {
   to {
-    text-align: right;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes navbar-item {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

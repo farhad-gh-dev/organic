@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import NavbarAnimations from "../_navbar_animations";
 import SearchBox from "../SearchBox/SearchBox";
 import NavbarDropdownItem from "./NavbarItem/NavbarDropdownItem";
 import NavbarItem from "./NavbarItem/NavbarItem";
@@ -10,11 +8,7 @@ const NavbarItems: React.FC = () => {
 
   return (
     <div className={`navbar-items position-relative${active ? " active" : ""}`}>
-      <motion.div
-        initial={NavbarAnimations.dropdownSearch.start}
-        animate={NavbarAnimations.dropdownSearch.end}
-        className="search-and-dropdown"
-      >
+      <div className="search-and-dropdown">
         <SearchBox />
         <button
           className="dropdown-button custom-button"
@@ -24,7 +18,7 @@ const NavbarItems: React.FC = () => {
           <div className="middle"></div>
           <div className="bottom"></div>
         </button>
-      </motion.div>
+      </div>
       <ul className="items-container">
         <NavbarItem text={"home"} />
         <NavbarDropdownItem

@@ -10,6 +10,8 @@
     position: absolute;
     top: 35px;
     right: -3px;
+    transform: translateX(30px);
+    animation: graphic-1 0.5s ease-out forwards;
 
     @include md-size {
       top: 55px;
@@ -38,6 +40,9 @@
     position: absolute;
     top: 190px;
     left: 47%;
+    opacity: 0;
+    transform: translate(30px, 30px);
+    animation: graphic-2 0.7s ease-out forwards;
 
     @include xl-size {
       display: unset;
@@ -79,5 +84,17 @@
         fill: rgba($secondary_green, 0.4);
       }
     }
+  }
+}
+
+@keyframes graphic-1 {
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes graphic-2 {
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }

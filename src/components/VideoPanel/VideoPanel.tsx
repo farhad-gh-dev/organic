@@ -75,6 +75,7 @@ const VideoPanel: React.FC<Props> = ({ closeHandler }) => {
     <div className="video-panel cover-page z-index-fixed d-flex flex-column justify-content-center">
       <div className="video-container position-relative">
         <video
+          autoPlay
           ref={videoRef}
           {...videoAttributes}
           onClick={changePlayStatus}

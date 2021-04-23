@@ -41,10 +41,7 @@
     .graphic-container {
       position: absolute;
       z-index: 0;
-      opacity: 0;
-      transform: translateX(60px);
-      animation: header-graphic-animation 0.9s ease-out forwards;
-      animation-delay: 0.3s;
+      @include animate-opacity-translate(0, 60px, 0, 0.9s, ease-out, 0.3s);
 
       @include lg-size {
         height: 100%;
@@ -126,6 +123,7 @@
 
       .half-circles {
         top: 24px;
+        @include animate-opacity-translate(0, -30px, 0, 0.8s, ease-out, 0.6s);
 
         @include lg-size {
           top: 55px;
@@ -170,10 +168,7 @@
         letter-spacing: 0.05em;
         margin-bottom: 24px;
         padding-right: 20px;
-        opacity: 0;
-        transform: translateX(-30px);
-        animation: header-title 0.8s ease-out forwards;
-        animation-delay: 0.5s;
+        @include animate-opacity-translate(0, -30px, 0, 0.8s, ease-out, 0.5s);
 
         @include lg-size {
           transform: translateX(-50px);
@@ -196,10 +191,7 @@
         line-height: 24px;
         margin-bottom: 35px;
         padding-left: 10px;
-        opacity: 0;
-        transform: translateY(30px);
-        animation: header-title 0.8s ease-out forwards;
-        animation-delay: 0.75s;
+        @include animate-opacity-translate(0, 0, 30px, 0.8s, ease-out, 0.75s);
 
         @include lg-size {
           font-size: 21px;
@@ -235,9 +227,7 @@
         .explore-button {
           display: inline-block;
           opacity: 0;
-          transform: translateY(30px);
-          animation: header-title 0.75s ease-out forwards;
-          animation-delay: 1s;
+          @include animate-opacity-translate(0, 0, 30px, 0.75s, ease-out, 1s);
 
           button {
             padding: 16px;
@@ -269,10 +259,7 @@
           display: flex;
           align-items: center;
           margin-top: 33px;
-          opacity: 0;
-          transform: translateY(30px);
-          animation: header-title 0.75s ease-out forwards;
-          animation-delay: 1s;
+          @include animate-opacity-translate(0, 0, 30px, 0.75s, ease-out, 1s);
 
           @include lg-size {
             margin-top: 0;
@@ -355,18 +342,10 @@
             }
 
             #line {
-              stroke-dasharray: 121;
-              stroke-dashoffset: 121;
-              animation: arrow-line 1.3s ease;
-              animation-delay: 1.5s;
-              animation-fill-mode: forwards;
+              @include animate-stroke-dashoffset(121, 121, 1.3s, ease, 1.5s);
             }
             #tip {
-              stroke-dasharray: 26;
-              stroke-dashoffset: 26;
-              animation: arrow-tip 1s ease;
-              animation-delay: 2s;
-              animation-fill-mode: forwards;
+              @include animate-stroke-dashoffset(26, 26, 1s, ease, 2s);
             }
           }
         }
@@ -375,10 +354,7 @@
           top: -13px;
           right: 25px;
           @include drop-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.25));
-          opacity: 0;
-          transform: translate(70px, -90px) rotate(-65deg);
-          animation: header-buttons-graphic 1.2s ease-out forwards;
-          animation-delay: 0.2s;
+          @include animate-header-element();
 
           @include sm-size {
             right: -30px;
@@ -405,57 +381,5 @@
         }
       }
     }
-  }
-}
-
-//animations
-@keyframes header-graphic-animation {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes header-title {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes header-description {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes header-buttons {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes header-buttons-graphic {
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) rotate(-14deg);
-  }
-}
-
-@keyframes arrow-line {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes arrow-tip {
-  to {
-    stroke-dashoffset: 0;
   }
 }

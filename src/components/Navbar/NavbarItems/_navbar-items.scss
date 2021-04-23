@@ -9,9 +9,7 @@
   .search-and-dropdown {
     display: flex;
     align-items: center;
-    opacity: 0;
-    transform: translateX(50px);
-    animation: dropdown-search 0.7s ease-out forwards;
+    @include animate-opacity-translate(0, 50px, 0, 0.7s, ease-out);
 
     @include lg-size {
       display: none;
@@ -96,16 +94,13 @@
       margin: 0 0 6px;
       padding: 6px 10px 4px;
       font-size: 14px;
-      // font-weight: bold;
       text-transform: capitalize;
       background-color: rgba(255, 255, 255, 0.5);
       box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
       border: 1px solid rgba(0, 0, 0, 0.08);
       border-radius: 2px;
       white-space: nowrap;
-      opacity: 0;
-      transform: translateY(-25px);
-      animation: navbar-item 0.7s ease-out forwards;
+      @include animate-opacity-translate(0, 0, -35px, 0.7s, ease-out);
 
       @include sm-size {
         margin: 0 0 8px;
@@ -212,20 +207,5 @@
       height: auto;
       transition: 0.3s ease-in-out;
     }
-  }
-}
-
-//animations
-@keyframes dropdown-search {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes navbar-item {
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

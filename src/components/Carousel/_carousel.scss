@@ -24,10 +24,7 @@
     font-size: 22px;
     margin-bottom: 10px;
     padding-left: 10px;
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: carousel-title 0.8s ease-out forwards;
-    animation-delay: 1.2s;
+    @include animate-opacity-translate(0, -30px, 0, 0.8s, ease-out, 1.2s);
 
     @include xs-size {
       padding-left: 0;
@@ -87,9 +84,7 @@
 
       .item-card {
         padding-top: 25px;
-        opacity: 0;
-        transform: translateY(50px);
-        animation: carousel-card 0.8s ease-out forwards;
+        @include animate-opacity-translate(0, 0, 50px, 0.8s, ease-out);
 
         &:nth-child(1) {
           animation-delay: 1.5s;
@@ -301,10 +296,7 @@
       }
 
       .next {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: carousel-control-button 0.7s ease-out forwards;
-        animation-delay: 1.9s;
+        @include animate-opacity-translate(0, 0, 20px, 0.7s, ease-out, 1.9s);
 
         @include md-size {
           animation-delay: 2.2s;
@@ -320,26 +312,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes carousel-title {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes carousel-card {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes carousel-control-button {
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

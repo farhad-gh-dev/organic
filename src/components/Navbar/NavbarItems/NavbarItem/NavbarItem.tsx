@@ -1,14 +1,11 @@
 import React from "react";
+import { _NavbarLink_ } from "../../_navbar-types";
 
-interface Props {
-  text: string;
-}
-
-const NavbarItem: React.FC<Props> = ({ text }) => {
+const NavbarItem: React.FC<any> = ({ title, target }) => {
   return (
     <li>
-      <a href="#" className="nav-item custom-link">
-        {text}
+      <a href={target} className="nav-item custom-link">
+        {title}
       </a>
     </li>
   );

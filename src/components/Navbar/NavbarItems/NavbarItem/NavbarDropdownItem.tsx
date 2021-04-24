@@ -1,17 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as DropdownIcon } from "../../../../assets/dropdown.svg";
 
-interface DropdownItem {
-  text: string;
-  link?: string;
-}
-
-interface Props {
-  title: string;
-  dropdownItems?: DropdownItem[];
-}
-
-const NavbarDropdownItem: React.FC<Props> = ({ title, dropdownItems }) => {
+const NavbarDropdownItem: React.FC<any> = ({ title, target }) => {
   const [active, setActive] = useState<boolean>(false);
 
   return (
@@ -28,12 +18,16 @@ const NavbarDropdownItem: React.FC<Props> = ({ title, dropdownItems }) => {
         </div>
       </button>
       <div className={`dropdown-container${active ? " active" : ""}`}>
-        {dropdownItems
-          ? dropdownItems.map((item) => {
+        {target
+          ? target.map((item: any) => {
               return (
-                <div key={item.text} className="nav-item">
-                  {item.text}
-                </div>
+                <a
+                  href={item.target}
+                  key={item.title}
+                  className="nav-item custom-link"
+                >
+                  {item.title}
+                </a>
               );
             })
           : null}

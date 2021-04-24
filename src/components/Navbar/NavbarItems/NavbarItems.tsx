@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import { _NavbarDropdown_, _NavbarLink_ } from "../_navbar-types";
 import SearchBox from "../SearchBox/SearchBox";
 import NavbarDropdownItem from "./NavbarItem/NavbarDropdownItem";
 import NavbarItem from "./NavbarItem/NavbarItem";
 
-const NavbarItems: React.FC = () => {
+interface Props {
+  itemsData?: (_NavbarLink_ | _NavbarDropdown_)[];
+}
+
+const NavbarItems: React.FC<Props> = ({ itemsData }) => {
   const [active, setActive] = useState<boolean>(false);
 
   return (
@@ -19,18 +24,14 @@ const NavbarItems: React.FC = () => {
           <div className="bottom"></div>
         </button>
       </div>
-      <ul className="items-container">
-        <NavbarItem text={"home"} />
-        <NavbarDropdownItem
-          title="products"
-          dropdownItems={[
-            { text: "face wash" },
-            { text: "makeup remover" },
-            { text: "night serom" },
-          ]}
-        />
-        <NavbarItem text={"about"} />
-      </ul>
+      {itemsData ? (
+        <ul className="items-container">
+          {itemsData.map((itemData) => {
+            if (itemData.type === "link") return <NavbarItem {...itemData} />;
+            return <NavbarDropdownItem {...itemData} />;
+          })}
+        </ul>
+      ) : null}
     </div>
   );
 };

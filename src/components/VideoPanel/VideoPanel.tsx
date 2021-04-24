@@ -8,10 +8,11 @@ import { ReactComponent as UnmuteIcon } from "../../assets/unmute.svg";
 import { ReactComponent as MuteIcon } from "../../assets/mute.svg";
 
 interface Props {
+  videoSrc?: string;
   closeHandler: () => void;
 }
 
-const VideoPanel: React.FC<Props> = ({ closeHandler }) => {
+const VideoPanel: React.FC<Props> = ({ videoSrc, closeHandler }) => {
   const [videoAttributes, setVideoAttributes] = useState({
     paused: false,
     muted: false,
@@ -83,7 +84,7 @@ const VideoPanel: React.FC<Props> = ({ closeHandler }) => {
           onPlay={onPauseHandler}
           className="position-absolute to-center"
         >
-          <source src={TeaserVideo} type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
         </video>
         <div className="control-buttons cover-parent">
           <button

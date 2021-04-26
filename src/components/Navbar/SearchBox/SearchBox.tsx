@@ -9,17 +9,17 @@ const SearchBox: React.FC = () => {
   };
 
   return (
-    <div className="search-box position-relative">
+    <div className="search-box position-relative __primary-bg-color__">
       <div className="input-container">
         <input
-          className="search-input custom-input"
+          className="search-input custom-input __search-text-color__"
           placeholder="Search for"
           value={inputValue}
           onChange={(e) => handleInputValue(e)}
         />
       </div>
       <button
-        className="custom-button search-button position-absolute"
+        className="custom-button search-button position-absolute __primary-text-color__"
         onClick={() => console.log("submitted...")}
       >
         <SearchLogo />

@@ -49,11 +49,7 @@ const initTheme: Theme = {
     signUpPage: "#",
   },
   header: {
-    mainGraphic: HeaderGraphic,
-    donutGraphic: {
-      src: DonutGraphic,
-      color: "red",
-    },
+    mainGraphicSrc: HeaderGraphic,
     title: "It's all organic here",
     description:
       "An Organic product is made from materials producted by organic agriculture",

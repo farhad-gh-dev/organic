@@ -17,7 +17,7 @@ const App: React.FC = () => {
   console.log(navbarData);
 
   return (
-    <div className="app position-relative">
+    <div className="app __aloe-vera-theme__ position-relative">
       <BackgroundGraphics />
       <Navbar
         brandName={navbarData.brandName}
@@ -26,7 +26,7 @@ const App: React.FC = () => {
         signUpPage={navbarData.signUpPage}
       />
       <Header
-        mainGraphic={HeaderData.mainGraphic}
+        mainGraphicSrc={HeaderData.mainGraphicSrc}
         title={HeaderData.title}
         description={HeaderData.description}
         videoSrc={HeaderData.videoSrc}

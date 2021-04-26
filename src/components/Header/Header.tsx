@@ -10,7 +10,7 @@ import { ReactComponent as ArrowGraphic } from "../../assets/arrow.svg";
 import LeafImage from "../../assets/images/leaf.png";
 
 const Header: React.FC<_HeaderData_> = ({
-  mainGraphic,
+  mainGraphicSrc,
   title,
   description,
   videoSrc,
@@ -29,26 +29,30 @@ const Header: React.FC<_HeaderData_> = ({
       <div className="header-container position-relative">
         <div className="graphic-container position-absolute from-top from-right">
           <GlassGraphic />
-          <div className="donut-graphic">
+          <div className="donut-graphic __donut-color__">
             <DonutGraphic />
           </div>
         </div>
 
         <div className="text-area">
           <div className="half-circles position-absolute from-left">
-            <span className="graphic-1">
+            <span className="graphic-1 __svg-primary-color__">
               <HalfCircleGraphic />
             </span>
-            <span className="graphic-2">
+            <span className="graphic-2 __svg-secondary-color__">
               <HalfCircleGraphic />
             </span>
           </div>
-          <h1 className="title text-title p-relative">{title}</h1>
-          <p className="description text-paragraph p-relative">{description}</p>
+          <h1 className="title text-title p-relative __primary-text-color__">
+            {title}
+          </h1>
+          <p className="description text-paragraph p-relative __secondary-text-color__">
+            {description}
+          </p>
 
           <div className="buttons-container position-relative d-flex">
             <div className="explore-button">
-              <button className=" primary-button">
+              <button className="primary-button __button-bg-color__ __button-text-color__">
                 <span className="text-cap">explore now</span>
                 <div className="button-icon">
                   <ExploreIcon />
@@ -61,14 +65,16 @@ const Header: React.FC<_HeaderData_> = ({
                 className="custom-button d-flex align-items-center"
                 onClick={() => setShowVideoPanel(true)}
               >
-                <div className="button-icon custom-button d-flex item-center">
+                <div className="button-icon custom-button d-flex item-center __primary-bg-color__ __primary-text-color__">
                   <PlayButtonIcon />
                 </div>
-                <span className="text-cap">see video</span>
+                <span className="text-cap __primary-text-color__">
+                  see video
+                </span>
               </button>
             </div>
 
-            <div className="buttons-graphic position-absolute">
+            <div className="buttons-graphic position-absolute __arrow-color__">
               <ArrowGraphic />
             </div>
 

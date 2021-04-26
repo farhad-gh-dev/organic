@@ -18,7 +18,9 @@ const Navbar: React.FC<_NavbarData_> = ({
           className="brand-container custom-link d-flex align-items-center"
         >
           <img src={brandLogo} alt="brand logo" className="brand-logo" />
-          <div className="brand-name text-title">{brandName}</div>
+          <div className="brand-name text-title __brand-name-color__">
+            {brandName}
+          </div>
         </a>
       ) : null}
 
@@ -28,7 +30,7 @@ const Navbar: React.FC<_NavbarData_> = ({
         <SearchBox />
         <a
           href={signUpPage}
-          className="sign-up-button custom-link primary-button "
+          className="sign-up-button custom-link primary-button __button-bg-color__ __button-text-color__"
         >
           <span>Sign up</span>
           <div className="button-icon">

@@ -64,12 +64,16 @@ const Carousel: React.FC = () => {
 
   return (
     <div className="carousel">
-      <div className="carousel-title text-title">Recommended for you</div>
+      <div className="carousel-title text-title __primary-text-color__">
+        Recommended for you
+      </div>
       <div className="carousel-body position-relative">
         <div className="slides-container">
           <div className="wrapper" style={{ left: `-${activeSlide * 100}%` }}>
-            {cardsData.map((item) => {
-              return <ItemCard key={item.title} cardData={item} />;
+            {cardsData.map((item, index) => {
+              return (
+                <ItemCard key={item.title} index={index} cardData={item} />
+              );
             })}
           </div>
         </div>
@@ -77,14 +81,14 @@ const Carousel: React.FC = () => {
         <div className="control-buttons">
           {activeSlide >= 1 ? (
             <button
-              className="prev custom-button"
+              className="prev custom-button __button-bg-color__"
               onClick={() => prevSlideHandler()}
             >
               <PrevIcon />
             </button>
           ) : null}
           <button
-            className="next custom-button"
+            className="next custom-button __button-bg-color__"
             onClick={() => nextSlideHandler()}
           >
             <NextIcon />

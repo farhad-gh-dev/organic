@@ -1,0 +1,197 @@
+.__aloe-vera-theme__ {
+  background-color: #f4fff9 !important;
+  .__primary-bg-color__ {
+    background-color: #b8e2d6 !important;
+  }
+  .__secondary-bg-color__ {
+    background-color: #d3e8cd !important;
+  }
+  .__primary-text-color__ {
+    color: #1d221e !important;
+
+    svg {
+      path {
+        fill: #1d221e !important;
+      }
+      rect {
+        stroke: #1d221e !important;
+      }
+      circle {
+        stroke: #1d221e !important;
+      }
+    }
+  }
+  .__secondary-text-color__ {
+    color: #686e6a !important;
+  }
+  .__button-text-color__ {
+    color: #ffffff !important;
+
+    svg {
+      path {
+        fill: #ffffff !important;
+      }
+    }
+  }
+  .__button-bg-color__ {
+    background-color: #1d221e !important;
+  }
+  .__input-text-color__ {
+    color: #000000;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+  .__svg-primary-color__ {
+    svg {
+      path {
+        fill: #b8e2d6 !important;
+      }
+    }
+  }
+  .__svg-secondary-color__ {
+    svg {
+      path {
+        fill: #d3e8cd !important;
+      }
+    }
+  }
+  .__brand-name-color__ {
+    color: #1d221e !important;
+  }
+  .__navbar-item-bg-color__ {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+
+    @include lg-size {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  .__navbar-dropdown-bg-color__ {
+    background-color: rgba(228, 228, 228, 0.7);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .__arrow-color__ {
+    svg {
+      path {
+        stroke: #b8e2d6 !important;
+      }
+    }
+  }
+  .__two-leafs-color__ {
+    #top {
+      fill: #d3e8cd !important;
+    }
+    #bottom {
+      fill: #b8e2d6 !important;
+    }
+  }
+  .__donut-color__ {
+    svg {
+      path {
+        fill: rgba(#b8e2d6, 0.3) !important;
+      }
+    }
+  }
+}
+
+.__blueberry-theme__ {
+  background-color: #ebf1fb !important;
+  .__primary-bg-color__ {
+    background-color: #778ebb !important;
+  }
+  .__secondary-bg-color__ {
+    background-color: #b5c6e8 !important;
+  }
+  .__primary-text-color__ {
+    color: #1d221e !important;
+
+    svg {
+      path {
+        fill: #1d221e !important;
+      }
+      rect {
+        stroke: #1d221e !important;
+      }
+      circle {
+        stroke: #1d221e !important;
+      }
+    }
+  }
+  .__secondary-text-color__ {
+    color: #686e6a !important;
+  }
+  .__button-text-color__ {
+    color: #ffffff !important;
+
+    svg {
+      path {
+        fill: #ffffff !important;
+      }
+    }
+  }
+  .__button-bg-color__ {
+    background-color: #1d221e !important;
+  }
+  .__input-text-color__ {
+    color: #000000;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+  .__svg-primary-color__ {
+    svg {
+      path {
+        fill: #778ebb !important;
+      }
+    }
+  }
+  .__svg-secondary-color__ {
+    svg {
+      path {
+        fill: #b5c6e8 !important;
+      }
+    }
+  }
+  .__brand-name-color__ {
+    color: #1d221e !important;
+  }
+  .__navbar-item-bg-color__ {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+
+    @include lg-size {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  .__navbar-dropdown-bg-color__ {
+    background-color: rgba(228, 228, 228, 0.7);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .__arrow-color__ {
+    svg {
+      path {
+        stroke: #778ebb !important;
+      }
+    }
+  }
+  .__two-leafs-color__ {
+    #top {
+      fill: #b5c6e8 !important;
+    }
+    #bottom {
+      fill: #778ebb !important;
+    }
+  }
+  .__donut-color__ {
+    svg {
+      path {
+        fill: rgba(#778ebb, 0.3) !important;
+      }
+    }
+  }
+}

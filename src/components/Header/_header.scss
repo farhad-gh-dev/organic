@@ -100,10 +100,6 @@
           @include lg-size {
             width: 210px;
           }
-
-          path {
-            fill: rgba($primary_green, 0.3);
-          }
         }
       }
     }
@@ -140,16 +136,6 @@
           @include xl-size {
             height: 70px;
             width: auto;
-          }
-        }
-        .graphic-1 {
-          #half-circle {
-            fill: $primary_green;
-          }
-        }
-        .graphic-2 {
-          #half-circle {
-            fill: $secondary_green;
           }
         }
       }
@@ -273,7 +259,6 @@
 
             .button-icon {
               padding: 12px;
-              background-color: $primary_green;
               border-radius: 100%;
 
               @include lg-size {

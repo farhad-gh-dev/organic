@@ -2,6 +2,7 @@ import React from "react";
 import { ReactComponent as QuarterCircle } from "../../../assets/quarter-circle.svg";
 
 interface Props {
+  index: number;
   cardData: {
     title: string;
     description: string;
@@ -11,11 +12,13 @@ interface Props {
   };
 }
 
-const ItemCard: React.FC<Props> = ({ cardData }) => {
+const ItemCard: React.FC<Props> = ({ index, cardData }) => {
   return (
     <div className="item-card d-flex align-items-center">
       <div
-        className={`card-image position-relative d-flex ${cardData.background}`}
+        className={`card-image position-relative d-flex ${
+          index % 2 === 0 ? "__svg-secondary-color__" : "__svg-primary-color__"
+        }`}
       >
         <QuarterCircle />
         <img
@@ -25,11 +28,15 @@ const ItemCard: React.FC<Props> = ({ cardData }) => {
         />
       </div>
       <div className="text-area">
-        <h3 className="card-title text-title text-cap">{cardData.title}</h3>
-        <p className="card-description text-paragraph">
+        <h3 className="card-title text-title text-cap __primary-text-color__">
+          {cardData.title}
+        </h3>
+        <p className="card-description text-paragraph __secondary-text-color__">
           {cardData.description}
         </p>
-        <div className="card-price text-title">${cardData.price}</div>
+        <div className="card-price text-title __primary-text-color__">
+          ${cardData.price}
+        </div>
       </div>
     </div>
   );

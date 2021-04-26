@@ -7,6 +7,8 @@ import BackgroundGraphics from "./components/Graphics/Graphics";
 import { useSelector } from "react-redux";
 
 const App: React.FC = () => {
+  const theme: any = useSelector<any>((store) => store.themeReducer.theme);
+
   const navbarData: any = useSelector<any>(
     (store) => store.themeReducer.navbar
   );
@@ -17,7 +19,7 @@ const App: React.FC = () => {
   console.log(navbarData);
 
   return (
-    <div className="app __aloe-vera-theme__ position-relative">
+    <div className={`app position-relative __${theme}-theme__`}>
       <BackgroundGraphics />
       <Navbar
         brandName={navbarData.brandName}

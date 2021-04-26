@@ -2,7 +2,7 @@ export type NAVBAR_LINK = "link";
 export type NAVBAR_DROPDOWN = "dropdown";
 
 export interface _NavbarLink_ {
-  type: string;
+  type?: string;
   title: string;
   target: string;
 }
@@ -10,7 +10,7 @@ export interface _NavbarLink_ {
 export interface _NavbarDropdown_ {
   type: string;
   title: string;
-  target: _NavbarLink_[];
+  target: string[];
 }
 
 export interface _NavbarData_ {

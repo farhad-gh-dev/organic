@@ -1,48 +1,29 @@
 import { combineReducers } from "redux";
+import { SET_NEW_THEME } from "./actions";
+
 import { _NavbarData_ } from "../components/Navbar/_navbar-types";
 import { _HeaderData_ } from "../components/Header/_header-types";
 import BrandLogo from "../assets/logo/logo.png";
 import { ReactComponent as HeaderGraphic } from "../assets/glass-graphic.svg";
-import { ReactComponent as DonutGraphic } from "../assets/donut.svg";
 import HeaderVideo from "../assets/videos/teaser.mp4";
 
-interface General {
-  backgroundColor?: string;
-  primaryColor?: string;
-  secondaryColor?: string;
-  primaryTextColor?: string;
-  secondaryTextColor?: string;
-  buttonBackgroundColor?: string;
-}
-
 interface Theme {
-  general: General;
+  theme: string;
   navbar: _NavbarData_;
   header: _HeaderData_;
 }
 
 const initTheme: Theme = {
-  general: {
-    backgroundColor: "#f4fff9",
-    primaryColor: "",
-    secondaryColor: "",
-    primaryTextColor: "",
-    secondaryTextColor: "",
-    buttonBackgroundColor: "",
-  },
+  theme: "aloe-vera",
   navbar: {
-    brandName: "Nature",
+    brandName: "Organic",
     brandLogo: BrandLogo,
     items: [
       { type: "link", title: "home", target: "#" },
       {
         type: "dropdown",
-        title: "product",
-        target: [
-          { type: "link", title: "face wash", target: "#" },
-          { type: "link", title: "makeup remover", target: "#" },
-          { type: "link", title: "night serum", target: "#" },
-        ],
+        title: "themes",
+        target: ["aloe vera", "blueberry", "orange"],
       },
       { type: "link", title: "home", target: "#" },
     ],
@@ -58,7 +39,15 @@ const initTheme: Theme = {
 };
 
 function themeReducer(state: Theme = initTheme, action: any) {
-  return state;
+  switch (action.type) {
+    case SET_NEW_THEME:
+      return {
+        ...state,
+        theme: action.payload,
+      };
+    default:
+      return state;
+  }
 }
 
 export default combineReducers({

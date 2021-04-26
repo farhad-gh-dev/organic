@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { changeTheme } from "../../../../redux/actions";
 import { ReactComponent as DropdownIcon } from "../../../../assets/dropdown.svg";
 
 const NavbarDropdownItem: React.FC<any> = ({ title, target }) => {
   const [active, setActive] = useState<boolean>(false);
+  const dispatch = useDispatch();
 
   return (
     <li className="position-relative">
@@ -19,15 +22,15 @@ const NavbarDropdownItem: React.FC<any> = ({ title, target }) => {
       </button>
       <div className={`dropdown-container${active ? " active" : ""}`}>
         {target
-          ? target.map((item: any) => {
+          ? target.map((title: string) => {
               return (
-                <a
-                  href={item.target}
-                  key={item.title}
-                  className="nav-item custom-link __primary-text-color__ __navbar-dropdown-bg-color__"
+                <button
+                  key={title}
+                  onClick={() => dispatch(changeTheme(title.replace(" ", "-")))}
+                  className="nav-item custom-button __primary-text-color__ __navbar-dropdown-bg-color__"
                 >
-                  {item.title}
-                </a>
+                  {title}
+                </button>
               );
             })
           : null}

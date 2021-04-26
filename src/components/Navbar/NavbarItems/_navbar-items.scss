@@ -151,7 +151,7 @@
           margin-bottom: 8px;
           visibility: hidden;
           opacity: 0;
-          transform: translateX(0px);
+          transform: translateX(50px);
         }
       }
 
@@ -163,7 +163,7 @@
           .nav-item {
             visibility: visible;
             opacity: 1;
-            transform: translateX(-50px);
+            transform: translateX(0px);
             transition: 0.25s ease-in-out;
 
             &:nth-child(2) {

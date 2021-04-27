@@ -1,7 +1,7 @@
-import { FunctionComponent, SVGProps } from "react";
+import { PropsWithChildren, SVGProps } from "react";
 
 export interface _HeaderData_ {
-  mainGraphicSrc?: FunctionComponent<SVGProps<SVGSVGElement>>;
+  mainGraphicSrc?: PropsWithChildren<SVGProps<SVGSVGElement>>;
   title?: string;
   description?: string;
   videoSrc?: string;

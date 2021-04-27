@@ -4,7 +4,9 @@ import { SET_NEW_THEME } from "./actions";
 import { _NavbarData_ } from "../components/Navbar/_navbar-types";
 import { _HeaderData_ } from "../components/Header/_header-types";
 import BrandLogo from "../assets/logo/logo.png";
-import { ReactComponent as HeaderGraphic } from "../assets/glass-graphic.svg";
+import { ReactComponent as AloeVeraGraphic } from "../assets/aloevera-graphic.svg";
+import { ReactComponent as BlueBerryGraphic } from "../assets/blueberry-graphic.svg";
+import { ReactComponent as ChocolateGraphic } from "../assets/chocolate-graphic.svg";
 import HeaderVideo from "../assets/videos/teaser.mp4";
 
 interface Theme {
@@ -23,14 +25,14 @@ const initTheme: Theme = {
       {
         type: "dropdown",
         title: "themes",
-        target: ["aloe vera", "blueberry", "orange"],
+        target: ["aloe vera", "blueberry", "chocolate"],
       },
       { type: "link", title: "home", target: "#" },
     ],
     signUpPage: "#",
   },
   header: {
-    mainGraphicSrc: HeaderGraphic,
+    mainGraphicSrc: <BlueBerryGraphic />,
     title: "It's all organic here",
     description:
       "An Organic product is made from materials producted by organic agriculture",

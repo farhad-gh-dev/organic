@@ -144,26 +144,27 @@
           }
 
           img {
-            width: calc(100% - 8px);
+            max-height: 100%;
+            width: calc(auto - 8px);
             bottom: 5px;
             right: 0;
             @include drop-shadow(3px, 2px, 5px, rgba(0, 0, 0, 0.2));
 
             @include sm-size {
-              width: calc(100% - 13px);
+              width: calc(auto - 13px);
               bottom: 10px;
               @include drop-shadow(5px, 5px, 10px, rgba(0, 0, 0, 0.2));
             }
 
             @include md-size {
-              width: calc(100% - 8px);
+              width: calc(auto - 8px);
               bottom: 5px;
               right: 0;
               @include drop-shadow(3px, 2px, 5px, rgba(0, 0, 0, 0.2));
             }
 
             @include lg-size {
-              width: calc(100% - 13px);
+              width: calc(auto - 13px);
               bottom: 10px;
               @include drop-shadow(5px, 5px, 10px, rgba(0, 0, 0, 0.2));
             }

@@ -5,21 +5,19 @@ import Carousel from "./components/Carousel/Carousel";
 import BackgroundGraphics from "./components/Graphics/Graphics";
 
 import { useSelector } from "react-redux";
+import { RootState } from "./redux/reducer";
 
 const App: React.FC = () => {
-  const theme: any = useSelector<any>((store) => store.themeReducer.theme);
+  const {
+    navbar: navbarData,
+    activeTheme,
+    themes,
+  } = useSelector((store: RootState) => store.themeReducer);
 
-  const navbarData: any = useSelector<any>(
-    (store) => store.themeReducer.navbar
-  );
-  const HeaderData: any = useSelector<any>(
-    (store) => store.themeReducer.header
-  );
-
-  console.log(navbarData);
+  console.log(themes[activeTheme]);
 
   return (
-    <div className={`app position-relative __${theme}-theme__`}>
+    <div className={`app position-relative __${activeTheme}-theme__`}>
       <BackgroundGraphics />
       <Navbar
         brandName={navbarData.brandName}
@@ -28,12 +26,12 @@ const App: React.FC = () => {
         signUpPage={navbarData.signUpPage}
       />
       <Header
-        mainGraphicSrc={HeaderData.mainGraphicSrc}
-        title={HeaderData.title}
-        description={HeaderData.description}
-        videoSrc={HeaderData.videoSrc}
+        mainGraphicSrc={themes[activeTheme].mainGraphicSrc}
+        title={themes[activeTheme].title}
+        description={themes[activeTheme].description}
+        videoSrc={themes[activeTheme].videoSrc}
       />
-      <Carousel />
+      <Carousel carouselItems={themes[activeTheme].products} />
     </div>
   );
 };

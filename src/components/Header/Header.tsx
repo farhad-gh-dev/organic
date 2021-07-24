@@ -8,6 +8,7 @@ import { ReactComponent as ExploreIcon } from "../../assets/explore.svg";
 import { ReactComponent as PlayButtonIcon } from "../../assets/play-button-icon.svg";
 import { ReactComponent as ArrowGraphic } from "../../assets/arrow.svg";
 import LeafImage from "../../assets/images/leaf.png";
+import CookieImage from "../../assets/images/cookies.png";
 
 const Header: React.FC<_HeaderData_> = ({
   mainGraphicSrc,
@@ -79,7 +80,7 @@ const Header: React.FC<_HeaderData_> = ({
             </div>
 
             <div className="buttons-graphic-2 position-absolute">
-              <img src={LeafImage} alt="leaf" className="graphic-element" />
+              <img src={CookieImage} alt="leaf" className="graphic-element" />
             </div>
           </div>
         </div>

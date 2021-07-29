@@ -30,6 +30,7 @@ const App: React.FC = () => {
         title={themes[activeTheme].title}
         description={themes[activeTheme].description}
         videoSrc={themes[activeTheme].videoSrc}
+        GraphicElement={themes[activeTheme].headerGraphicElement}
       />
       <Carousel carouselItems={themes[activeTheme].products} />
     </div>

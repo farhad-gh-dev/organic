@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import { _HeaderData_ } from "./_header-types";
 import VideoPanel from "../VideoPanel/VideoPanel";
-import { ReactComponent as GlassGraphic } from "../../assets/glass-graphic.svg";
 import { ReactComponent as DonutGraphic } from "../../assets/donut.svg";
 import { ReactComponent as HalfCircleGraphic } from "../../assets/half-circle.svg";
 import { ReactComponent as ExploreIcon } from "../../assets/explore.svg";
 import { ReactComponent as PlayButtonIcon } from "../../assets/play-button-icon.svg";
 import { ReactComponent as ArrowGraphic } from "../../assets/arrow.svg";
-import LeafImage from "../../assets/images/leaf.png";
-import CookieImage from "../../assets/images/cookies.png";
 
 const Header: React.FC<_HeaderData_> = ({
   mainGraphicSrc,
   title,
   description,
   videoSrc,
+  GraphicElement,
 }) => {
   const [showVideoPanel, setShowVideoPanel] = useState(false);
 
@@ -80,7 +78,11 @@ const Header: React.FC<_HeaderData_> = ({
             </div>
 
             <div className="buttons-graphic-2 position-absolute">
-              <img src={CookieImage} alt="leaf" className="graphic-element" />
+              <img
+                src={GraphicElement}
+                alt="graphic element"
+                className="graphic-element"
+              />
             </div>
           </div>
         </div>

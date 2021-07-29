@@ -5,4 +5,5 @@ export interface _HeaderData_ {
   title?: string;
   description?: string;
   videoSrc?: string;
+  GraphicElement?: string;
 }

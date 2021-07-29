@@ -13,6 +13,9 @@ import AloeveraProductImage2 from "../assets/images/model-product-2.png";
 import ChocolateProductImage1 from "../assets/images/hot-chocolate.png";
 import ChocolateProductImage2 from "../assets/images/frozen-hot-chocolate.png";
 
+import LeafImage from "../assets/images/leaf.png";
+import CookieImage from "../assets/images/cookies.png";
+
 import HeaderVideo from "../assets/videos/teaser.mp4";
 
 interface Theme {
@@ -45,6 +48,7 @@ const initTheme: Theme = {
       title: "It's all organic here",
       description:
         "An Organic product is made from materials producted by organic agriculture",
+      headerGraphicElement: LeafImage,
       videoSrc: HeaderVideo,
       products: [
         {
@@ -86,6 +90,7 @@ const initTheme: Theme = {
       title: "It's all organic here",
       description:
         "An Organic product is made from materials producted by organic agriculture",
+      headerGraphicElement: CookieImage,
       videoSrc: HeaderVideo,
       products: [
         {
@@ -127,6 +132,7 @@ const initTheme: Theme = {
       title: "It's all organic here",
       description:
         "An Organic product is made from materials producted by organic agriculture",
+      headerGraphicElement: CookieImage,
       videoSrc: HeaderVideo,
       products: [
         {

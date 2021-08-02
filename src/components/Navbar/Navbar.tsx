@@ -5,24 +5,24 @@ import NavbarItems from "./NavbarItems/NavbarItems";
 import SearchBox from "./SearchBox/SearchBox";
 
 const Navbar: React.FC<_NavbarData_> = ({
-  brandName,
+  brandName = "brand name",
   brandLogo,
   items,
   signUpPage,
 }) => {
   return (
     <div className="navbar d-flex justify-space-between align-items-center">
-      {brandName && brandLogo ? (
-        <a
-          href="#"
-          className="brand-container custom-link d-flex align-items-center"
-        >
+      <a
+        href="/"
+        className="brand-container custom-link d-flex align-items-center"
+      >
+        {brandLogo ? (
           <img src={brandLogo} alt="brand logo" className="brand-logo" />
-          <div className="brand-name text-title __brand-name-color__">
-            {brandName}
-          </div>
-        </a>
-      ) : null}
+        ) : null}
+        <div className="brand-name text-title __brand-name-color__">
+          {brandName}
+        </div>
+      </a>
 
       <NavbarItems itemsData={items} />
 

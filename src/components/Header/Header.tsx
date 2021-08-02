@@ -27,7 +27,7 @@ const Header: React.FC<_HeaderData_> = ({
       )}
       <div className="header-container position-relative">
         <div className="graphic-container position-absolute from-top from-right">
-          {mainGraphicSrc}
+          <img src={mainGraphicSrc} alt="header image" />
           <div className="donut-graphic __donut-color__">
             <DonutGraphic />
           </div>

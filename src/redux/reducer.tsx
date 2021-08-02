@@ -3,10 +3,14 @@ import { SET_NEW_THEME } from "./actions";
 
 import { _NavbarData_ } from "../components/Navbar/_navbar-types";
 import { _HeaderData_ } from "../components/Header/_header-types";
+
+import AloeVeraGraphic from "../assets/images/aloevera-graphic.png";
+import BlueBerryGraphic from "../assets/images/blueberry-graphic.png";
+import ChocolateGraphic from "../assets/images/chocolate-graphic.png";
+
 import BrandLogo from "../assets/logo/logo.png";
-import { ReactComponent as AloeVeraGraphic } from "../assets/aloevera-graphic.svg";
-import { ReactComponent as BlueBerryGraphic } from "../assets/blueberry-graphic.svg";
-import { ReactComponent as ChocolateGraphic } from "../assets/chocolate-graphic.svg";
+import ChocolateBrandLogo from "../assets/logo/chocolate.png";
+import BlueberryBrandLogo from "../assets/logo/blueberry.png";
 
 import AloeveraProductImage1 from "../assets/images/model-product-1.png";
 import AloeveraProductImage2 from "../assets/images/model-product-2.png";
@@ -15,6 +19,7 @@ import ChocolateProductImage2 from "../assets/images/frozen-hot-chocolate.png";
 
 import LeafImage from "../assets/images/leaf.png";
 import CookieImage from "../assets/images/cookies.png";
+import BlueBerriesImage from "../assets/images/blueberries.png";
 
 import HeaderVideo from "../assets/videos/teaser.mp4";
 
@@ -27,8 +32,6 @@ interface Theme {
 const initTheme: Theme = {
   activeTheme: "chocolate",
   navbar: {
-    brandName: "Organic",
-    brandLogo: BrandLogo,
     items: [
       { type: "link", title: "home", target: "#" },
       {
@@ -44,7 +47,7 @@ const initTheme: Theme = {
     "aloe-vera": {
       brandName: "Organic",
       brandLogo: BrandLogo,
-      mainGraphicSrc: <AloeVeraGraphic />,
+      mainGraphicSrc: AloeVeraGraphic,
       title: "It's all organic here",
       description:
         "An Organic product is made from materials producted by organic agriculture",
@@ -84,13 +87,13 @@ const initTheme: Theme = {
       ],
     },
     blueberry: {
-      brandName: "Organic",
-      brandLogo: BrandLogo,
-      mainGraphicSrc: <BlueBerryGraphic />,
+      brandName: "Bluberry Bay",
+      brandLogo: BlueberryBrandLogo,
+      mainGraphicSrc: BlueBerryGraphic,
       title: "It's all organic here",
       description:
         "An Organic product is made from materials producted by organic agriculture",
-      headerGraphicElement: CookieImage,
+      headerGraphicElement: BlueBerriesImage,
       videoSrc: HeaderVideo,
       products: [
         {
@@ -126,9 +129,9 @@ const initTheme: Theme = {
       ],
     },
     chocolate: {
-      brandName: "Organic",
-      brandLogo: BrandLogo,
-      mainGraphicSrc: <ChocolateGraphic />,
+      brandName: "Chocolove",
+      brandLogo: ChocolateBrandLogo,
+      mainGraphicSrc: ChocolateGraphic,
       title: "It's all organic here",
       description:
         "An Organic product is made from materials producted by organic agriculture",

@@ -20,8 +20,8 @@ const App: React.FC = () => {
     <div className={`app position-relative __${activeTheme}-theme__`}>
       <BackgroundGraphics />
       <Navbar
-        brandName={navbarData.brandName}
-        brandLogo={navbarData.brandLogo}
+        brandName={themes[activeTheme].brandName}
+        brandLogo={themes[activeTheme].brandLogo}
         items={navbarData.items}
         signUpPage={navbarData.signUpPage}
       />

@@ -14,6 +14,8 @@ import BlueberryBrandLogo from "../assets/logo/blueberry.png";
 
 import AloeveraProductImage1 from "../assets/images/model-product-1.png";
 import AloeveraProductImage2 from "../assets/images/model-product-2.png";
+import BlueberryProductImage1 from "../assets/images/blueberry-ice-cream-1.png";
+import BlueberryProductImage2 from "../assets/images/blueberry-ice-cream-2.png";
 import ChocolateProductImage1 from "../assets/images/hot-chocolate.png";
 import ChocolateProductImage2 from "../assets/images/frozen-hot-chocolate.png";
 
@@ -30,7 +32,7 @@ interface Theme {
 }
 
 const initTheme: Theme = {
-  activeTheme: "chocolate",
+  activeTheme: "aloe-vera",
   navbar: {
     items: [
       { type: "link", title: "home", target: "#" },
@@ -90,41 +92,41 @@ const initTheme: Theme = {
       brandName: "Bluberry Bay",
       brandLogo: BlueberryBrandLogo,
       mainGraphicSrc: BlueBerryGraphic,
-      title: "It's all organic here",
+      title: "Make sweet memories",
       description:
-        "An Organic product is made from materials producted by organic agriculture",
+        "All of our vegan ice creams take a lengthy and rewarding process to make, try them now.",
       headerGraphicElement: BlueBerriesImage,
       videoSrc: HeaderVideo,
       products: [
         {
-          title: "alovera cream",
-          description: "Moisturising for Inflammation for All Skin Types.",
-          price: "115",
+          title: "Goji Moon Berry",
+          description:
+            "Wolfberry and goji berry ice cream with fudge sauce swirls.",
+          price: "8.50",
           background: "light",
-          image: AloeveraProductImage1,
+          image: BlueberryProductImage1,
         },
         {
-          title: "eye makeup remover",
-          description: `Vegetarian, Gluten-Free, Without animal
-          ingredients except honey & beeswax`,
-          price: "130",
+          title: "Dragonfruit Lemonade",
+          description: `Creamy and tart dragonfruit with fresh lemon.`,
+          price: "10.00",
           background: "dark",
-          image: AloeveraProductImage2,
+          image: BlueberryProductImage2,
         },
         {
-          title: "alovera cream",
-          description: "Moisturising for Inflammation for All Skin Types.",
-          price: "115",
+          title: "Goji Moon Berry",
+          description:
+            "Wolfberry and goji berry ice cream with fudge sauce swirls.",
+          price: "8.50",
           background: "light",
-          image: AloeveraProductImage1,
+          image: BlueberryProductImage1,
         },
         {
-          title: "eye makeup remover",
-          description: `Vegetarian, Gluten-Free, Without animal
-          ingredients except honey & beeswax`,
-          price: "130",
+          title: "Dragonfruit Lemonade",
+          description: `Creamy and tart dragonfruit with fresh lemon.`,
+          price: "10.00",
           background: "dark",
-          image: AloeveraProductImage2,
+          image: BlueberryProductImage2,
         },
       ],
     },
@@ -132,9 +134,9 @@ const initTheme: Theme = {
       brandName: "Chocolove",
       brandLogo: ChocolateBrandLogo,
       mainGraphicSrc: ChocolateGraphic,
-      title: "It's all organic here",
+      title: " Set your bars high",
       description:
-        "An Organic product is made from materials producted by organic agriculture",
+        "Savor the difference of artisan chocolate, handcrafted by local chocolatiers for you.",
       headerGraphicElement: CookieImage,
       videoSrc: HeaderVideo,
       products: [

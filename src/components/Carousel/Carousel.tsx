@@ -49,7 +49,7 @@ const Carousel: React.FC<Props> = ({ carouselItems }) => {
           <div className="wrapper" style={{ left: `-${activeSlide * 100}%` }}>
             {carouselItems.map((item, index) => {
               return (
-                <ItemCard key={item.title} index={index} cardData={item} />
+                <ItemCard key={item.background} index={index} cardData={item} />
               );
             })}
           </div>

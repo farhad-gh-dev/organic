@@ -8,7 +8,7 @@ import AloeVeraGraphic from "../assets/images/aloevera-graphic.png";
 import BlueBerryGraphic from "../assets/images/blueberry-graphic.png";
 import ChocolateGraphic from "../assets/images/chocolate-graphic.png";
 
-import BrandLogo from "../assets/logo/logo.png";
+import BrandLogo from "../assets/logo/aloe-vera.png";
 import ChocolateBrandLogo from "../assets/logo/chocolate.png";
 import BlueberryBrandLogo from "../assets/logo/blueberry.png";
 

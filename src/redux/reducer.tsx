@@ -141,17 +141,17 @@ const initTheme: Theme = {
       videoSrc: HeaderVideo,
       products: [
         {
-          title: "alovera cream",
-          description: "Moisturising for Inflammation for All Skin Types.",
-          price: "115",
+          title: "Chocolate milkshake",
+          description:
+            "This indulgent masterpiece topped with cream and drizzle is one seriously special treat.",
+          price: "2.59",
           background: "light",
           image: ChocolateProductImage2,
         },
         {
-          title: "eye makeup remover",
-          description: `Vegetarian, Gluten-Free, Without animal
-          ingredients except honey & beeswax`,
-          price: "130",
+          title: "Hot Chocolate",
+          description: `This rich and creamy Hot Chocolate has intense chocolate flavor.`,
+          price: "4.98",
           background: "dark",
           image: ChocolateProductImage1,
         },

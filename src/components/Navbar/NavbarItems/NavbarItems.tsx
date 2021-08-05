@@ -28,7 +28,9 @@ const NavbarItems: React.FC<Props> = ({ itemsData }) => {
         <ul className="items-container">
           {itemsData.map((itemData) => {
             if (itemData.type === "link") return <NavbarItem {...itemData} />;
-            return <NavbarDropdownItem {...itemData} />;
+            if (itemData.type === "dropdown")
+              return <NavbarDropdownItem {...itemData} />;
+            return;
           })}
         </ul>
       ) : null}

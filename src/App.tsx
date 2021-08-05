@@ -14,8 +14,6 @@ const App: React.FC = () => {
     themes,
   } = useSelector((store: RootState) => store.themeReducer);
 
-  console.log(themes[activeTheme]);
-
   return (
     <div className={`app position-relative __${activeTheme}-theme__`}>
       <BackgroundGraphics />

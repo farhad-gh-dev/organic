@@ -1,7 +1,11 @@
 import React from "react";
-import { _NavbarLink_ } from "../../_navbar-types";
 
-const NavbarItem: React.FC<any> = ({ title, target }) => {
+interface Props {
+  title: string;
+  target: any;
+}
+
+const NavbarItem: React.FC<Props> = ({ title, target }) => {
   return (
     <li>
       <a

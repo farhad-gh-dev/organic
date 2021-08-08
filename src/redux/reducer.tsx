@@ -2,7 +2,6 @@ import { combineReducers } from "redux";
 import { SET_NEW_THEME } from "./actions";
 
 import { _NavbarData_ } from "../components/Navbar/_navbar-types";
-import { _HeaderData_ } from "../components/Header/_header-types";
 
 import AloeVeraGraphic from "../assets/images/aloevera-graphic.png";
 import BlueBerryGraphic from "../assets/images/blueberry-graphic.png";
@@ -178,12 +177,6 @@ const initTheme: Theme = {
 function themeReducer(state: Theme = initTheme, action: any) {
   switch (action.type) {
     case SET_NEW_THEME:
-      let newMainGraphic = <ChocolateGraphic />;
-
-      if (action.payload === "aloe-vera") newMainGraphic = <AloeVeraGraphic />;
-      if (action.payload === "blueberry") newMainGraphic = <BlueBerryGraphic />;
-      if (action.payload === "chocolate") newMainGraphic = <ChocolateGraphic />;
-
       return {
         ...state,
         activeTheme: action.payload,

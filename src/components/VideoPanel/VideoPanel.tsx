@@ -1,5 +1,4 @@
 import React, { ChangeEvent, useState } from "react";
-import TeaserVideo from "../../assets/videos/teaser.mp4";
 import { ReactComponent as CloseIcon } from "../../assets/close.svg";
 import { ReactComponent as PlayIcon } from "../../assets/play.svg";
 import { ReactComponent as PauseIcon } from "../../assets/pause.svg";

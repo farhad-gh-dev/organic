@@ -31,7 +31,7 @@ const NavbarItems: React.FC<Props> = ({ itemsData }) => {
             if (itemData.type === "link") return <NavbarItem {...itemData} />;
             if (itemData.type === "dropdown")
               return <NavbarDropdownItem {...itemData} />;
-            return;
+            return null;
           })}
         </ul>
       ) : null}

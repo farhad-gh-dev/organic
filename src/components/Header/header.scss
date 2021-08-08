@@ -154,8 +154,6 @@
 
       .title {
         position: relative;
-        font-size: 50px;
-        letter-spacing: 0.05em;
         margin-bottom: 24px;
         padding-right: 20px;
         @include animate-opacity-translate(0, -30px, 0, 0.8s, ease-out, 0.5s);
@@ -163,13 +161,9 @@
         @include lg-size {
           transform: translateX(-50px);
           padding-right: 50px;
-          line-height: 95px;
-          font-size: 75px;
         }
 
         @include xl-size {
-          line-height: 103px;
-          font-size: 100px;
           margin-bottom: 38px;
         }
       }

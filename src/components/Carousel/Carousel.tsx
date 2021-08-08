@@ -42,9 +42,9 @@ const Carousel: React.FC<Props> = ({ carouselItems }) => {
 
   return (
     <div className="carousel">
-      <div className="carousel-title text-title __primary-text-color__">
+      <h2 className="carousel-title text-title __primary-text-color__">
         Recommended for you
-      </div>
+      </h2>
       <div className="carousel-body position-relative">
         <div className="slides-container">
           <div className="wrapper" style={{ left: `-${activeSlide * 100}%` }}>

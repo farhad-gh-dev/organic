@@ -34,7 +34,7 @@ const ItemCard: React.FC<Props> = ({ index, cardData }) => {
         <p className="card-description text-paragraph __secondary-text-color__">
           {cardData.description}
         </p>
-        <div className="card-price text-title __primary-text-color__">
+        <div className="card-price h3 text-title __primary-text-color__">
           ${cardData.price}
         </div>
       </div>

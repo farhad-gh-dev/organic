@@ -26,7 +26,6 @@
   }
 
   .carousel-title {
-    font-size: 22px;
     margin-bottom: 10px;
     padding-left: 10px;
     @include animate-opacity-translate(0, -30px, 0, 0.8s, ease-out, 1.2s);
@@ -45,7 +44,6 @@
     }
 
     @include lg-size {
-      font-size: 33px;
       margin-bottom: 50px;
       margin-right: 70px;
     }
@@ -178,23 +176,6 @@
 
         .text-area {
           width: 175px;
-
-          .card-title,
-          .card-price {
-            font-size: 17px;
-
-            @include sm-size {
-              font-size: 23px;
-            }
-
-            @include md-size {
-              font-size: 18px;
-            }
-
-            @include lg-size {
-              font-size: 23px;
-            }
-          }
 
           .card-title {
             padding-right: 70px;

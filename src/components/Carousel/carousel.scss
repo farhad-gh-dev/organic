@@ -174,22 +174,6 @@
               @include drop-shadow(5px, 5px, 10px, rgba(0, 0, 0, 0.2));
             }
           }
-
-          &.light {
-            svg {
-              path {
-                fill: $secondary-green;
-              }
-            }
-          }
-
-          &.dark {
-            svg {
-              path {
-                fill: $primary-green;
-              }
-            }
-          }
         }
 
         .text-area {

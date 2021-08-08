@@ -1,6 +1,13 @@
-$background_color: #f4fff9;
-$primary_green: #b8e2d6;
-$secondary_green: #d3e8cd;
-$button_background_color: #1d221e;
 $primary_text_color: #1d221e;
 $secondary_text_color: #686e6a;
+
+$button_background_color: #1d221e;
+$button_text_color: #ffffff;
+
+$input_text_color: #000000;
+
+//navbar
+$navbar_items_background_color: rgba(255, 255, 255, 0.7);
+$navbar_items_shadow_color: rgba(0, 0, 0, 0.1);
+$navbar_dropdown_items_background_color: rgba(228, 228, 228, 0.7);
+$navbar_dropdown_items_shadow_color: rgba(0, 0, 0, 0.1);

@@ -6,6 +6,7 @@ import { ReactComponent as PauseIcon } from "../../assets/pause.svg";
 import { ReactComponent as FullscreenInIcon } from "../../assets/fullscreen-in.svg";
 import { ReactComponent as UnmuteIcon } from "../../assets/unmute.svg";
 import { ReactComponent as MuteIcon } from "../../assets/mute.svg";
+import "./video-panel.scss";
 
 interface Props {
   videoSrc?: string;

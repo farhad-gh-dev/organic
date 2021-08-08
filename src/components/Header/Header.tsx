@@ -6,6 +6,7 @@ import { ReactComponent as HalfCircleGraphic } from "../../assets/half-circle.sv
 import { ReactComponent as ExploreIcon } from "../../assets/explore.svg";
 import { ReactComponent as PlayButtonIcon } from "../../assets/play-button-icon.svg";
 import { ReactComponent as ArrowGraphic } from "../../assets/arrow.svg";
+import "./header.scss";
 
 const Header: React.FC<_HeaderData_> = ({
   mainGraphicSrc,

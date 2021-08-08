@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ItemCard from "./ItemCard/ItemCard";
 import { ReactComponent as NextIcon } from "../../assets/next.svg";
 import { ReactComponent as PrevIcon } from "../../assets/prev.svg";
+import "./carousel.scss";
 
 interface CarouselItem {
   title: string;

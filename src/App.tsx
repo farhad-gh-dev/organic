@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import Carousel from "./components/Carousel/Carousel";
 import BackgroundGraphics from "./components/Graphics/Graphics";
+import "./app.scss";
 
 import { useSelector } from "react-redux";
 import { RootState } from "./redux/reducer";

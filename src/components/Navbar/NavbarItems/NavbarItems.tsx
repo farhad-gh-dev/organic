@@ -3,6 +3,7 @@ import { _NavbarDropdown_, _NavbarLink_ } from "../_navbar-types";
 import SearchBox from "../SearchBox/SearchBox";
 import NavbarDropdownItem from "./NavbarItem/NavbarDropdownItem";
 import NavbarItem from "./NavbarItem/NavbarItem";
+import "./navbar-items.scss";
 
 interface Props {
   itemsData?: (_NavbarLink_ | _NavbarDropdown_)[];

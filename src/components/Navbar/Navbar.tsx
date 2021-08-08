@@ -3,6 +3,7 @@ import { _NavbarData_ } from "./_navbar-types";
 import { ReactComponent as SignUpIcon } from "../../assets/sign-up.svg";
 import NavbarItems from "./NavbarItems/NavbarItems";
 import SearchBox from "./SearchBox/SearchBox";
+import "./navbar.scss";
 
 const Navbar: React.FC<_NavbarData_> = ({
   brandName = "brand name",

@@ -2,6 +2,7 @@ import React from "react";
 import { ReactComponent as TwoLeafs } from "../../assets/two-leafs.svg";
 import { ReactComponent as QuarterCircle } from "../../assets/quarter-circle.svg";
 import { ReactComponent as Donut } from "../../assets/donut.svg";
+import "./graphics.scss";
 
 const Graphics: React.FC = () => {
   return (

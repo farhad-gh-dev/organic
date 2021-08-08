@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ReactComponent as SearchLogo } from "../../../assets/search.svg";
+import "./search-box.scss";
 
 const SearchBox: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>("");

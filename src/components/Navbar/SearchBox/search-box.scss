@@ -23,6 +23,28 @@
     height: 65px;
   }
 
+  &:hover {
+    width: 115px;
+
+    @include sm-size {
+      width: 205px;
+    }
+
+    @include lg-size {
+      width: 280px;
+    }
+
+    .input-container {
+      display: block;
+    }
+  }
+
+  &:focus-within {
+    .search-button {
+      pointer-events: initial;
+    }
+  }
+
   .search-button {
     pointer-events: none;
     padding: 0px 8px;
@@ -74,28 +96,6 @@
         padding: 15px 0 15px 20px;
         font-size: 20px;
       }
-    }
-  }
-
-  &:hover {
-    width: 130px;
-
-    @include sm-size {
-      width: 205px;
-    }
-
-    @include lg-size {
-      width: 280px;
-    }
-
-    .input-container {
-      display: block;
-    }
-  }
-
-  &:focus-within {
-    .search-button {
-      pointer-events: initial;
     }
   }
 }

@@ -1,0 +1,80 @@
+@import "../../style/breakpoints";
+@import "../../style/animation";
+@import "../../style/mixins";
+
+.theme-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fffef7;
+  z-index: 10000;
+  display: none;
+
+  &.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .loading-text {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.2rem;
+
+    @include sm-size {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 2rem;
+
+      @include sm-size {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+
+    @include sm-size {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+    }
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #c0bfbc;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 46px;
+    left: 46px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 92px;
+    height: 92px;
+    opacity: 0;
+  }
+}

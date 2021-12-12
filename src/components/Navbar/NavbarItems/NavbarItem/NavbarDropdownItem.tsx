@@ -26,7 +26,10 @@ const NavbarDropdownItem: React.FC<any> = ({ title, target }) => {
               return (
                 <button
                   key={title}
-                  onClick={() => dispatch(changeTheme(title.replace(" ", "-")))}
+                  onClick={() => {
+                    dispatch(changeTheme(title.replace(" ", "-")));
+                    setActive(false);
+                  }}
                   className="nav-item custom-button __primary-text-color__ __navbar-dropdown-bg-color__"
                 >
                   {title}

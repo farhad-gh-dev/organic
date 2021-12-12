@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { SET_NEW_THEME } from "./actions";
+import { SET_LOADING, SET_NEW_THEME } from "./actions";
 
 import { _NavbarData_ } from "../components/Navbar/_navbar-types";
 
@@ -25,12 +25,14 @@ import BlueBerriesImage from "../assets/images/blueberries.png";
 import HeaderVideo from "../assets/videos/teaser.mp4";
 
 interface Theme {
+  isLoading: boolean;
   activeTheme: string;
   navbar: _NavbarData_;
   themes: any;
 }
 
 const initTheme: Theme = {
+  isLoading: false,
   activeTheme: "aloe-vera",
   navbar: {
     items: [
@@ -176,10 +178,16 @@ const initTheme: Theme = {
 
 function themeReducer(state: Theme = initTheme, action: any) {
   switch (action.type) {
+    case SET_LOADING:
+      return {
+        ...state,
+        isLoading: false,
+      };
     case SET_NEW_THEME:
       return {
         ...state,
         activeTheme: action.payload,
+        isLoading: true,
       };
     default:
       return state;

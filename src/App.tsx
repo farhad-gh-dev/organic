@@ -1,4 +1,5 @@
 import React from "react";
+import Loading from "./components/Loading/Loading";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import Carousel from "./components/Carousel/Carousel";
@@ -10,6 +11,7 @@ import { RootState } from "./redux/reducer";
 
 const App: React.FC = () => {
   const {
+    isLoading,
     navbar: navbarData,
     activeTheme,
     themes,
@@ -17,6 +19,8 @@ const App: React.FC = () => {
 
   return (
     <div className={`app position-relative __${activeTheme}-theme__`}>
+      <Loading isActive={isLoading} />
+
       <BackgroundGraphics />
       <Navbar
         brandName={themes[activeTheme].brandName}

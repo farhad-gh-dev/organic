@@ -1,6 +1,6 @@
 # Organic
 
-A template to display products with three different themes.
+A template to showcase products with three different themes.
 
 ![enter image description here](https://raw.githubusercontent.com/farhad-gh-dev/organic/master/src/assets/images/screenshot.png)
 

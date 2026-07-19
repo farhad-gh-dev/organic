@@ -42,7 +42,6 @@ const initTheme: Theme = {
         title: "themes",
         target: ["aloe vera", "blueberry", "chocolate"],
       },
-      { type: "link", title: "home", target: "#" },
     ],
     signUpPage: "#",
   },

@@ -52,12 +52,12 @@ const initTheme: Theme = {
       mainGraphicSrc: AloeVeraGraphic,
       title: "It's all organic here",
       description:
-        "An Organic product is made from materials producted by organic agriculture",
+        "An Organic product is made from materials produced by organic agriculture",
       headerGraphicElement: LeafImage,
       videoSrc: HeaderVideo,
       products: [
         {
-          title: "alovera cream",
+          title: "aloe vera cream",
           description: "Moisturising for Inflammation for All Skin Types.",
           price: "115",
           background: "light",
@@ -72,7 +72,7 @@ const initTheme: Theme = {
           image: AloeveraProductImage2,
         },
         {
-          title: "alovera cream",
+          title: "aloe vera cream",
           description: "Moisturising for Inflammation for All Skin Types.",
           price: "115",
           background: "light",
@@ -89,7 +89,7 @@ const initTheme: Theme = {
       ],
     },
     blueberry: {
-      brandName: "Bluberry Bay",
+      brandName: "Blueberry Bay",
       brandLogo: BlueberryBrandLogo,
       mainGraphicSrc: BlueBerryGraphic,
       title: "Make sweet memories",
@@ -134,7 +134,7 @@ const initTheme: Theme = {
       brandName: "Chocolove",
       brandLogo: ChocolateBrandLogo,
       mainGraphicSrc: ChocolateGraphic,
-      title: " Set your bars high",
+      title: "Set your bars high",
       description:
         "Savor the difference of artisan chocolate, handcrafted by local chocolatiers for you.",
       headerGraphicElement: CookieImage,
@@ -156,7 +156,7 @@ const initTheme: Theme = {
           image: ChocolateProductImage1,
         },
         {
-          title: "alovera cream",
+          title: "aloe vera cream",
           description: "Moisturising for Inflammation for All Skin Types.",
           price: "115",
           background: "light",

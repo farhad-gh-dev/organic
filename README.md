@@ -32,7 +32,7 @@ Now you can deploy this project!
 
     .
     ├── design
-    ├── public                  # Html, favicon and manifist related files
+    ├── public                  # Html, favicon and manifest related files
     ├── src                     # Source files
     ├── .gitignore
     ├── README.md

@@ -6,7 +6,7 @@ A template to showcase products with three different themes.
 
 ## Tech stack
 
-React JS (Typescript) - Redux - Redux Thunk - Sass
+React JS (TypeScript) - Redux - Redux Thunk - Sass
 
 ## Development and Build
 
